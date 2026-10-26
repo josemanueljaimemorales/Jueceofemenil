@@ -19,3 +19,8 @@ español, claro y sin relleno. Ver README.md.
 - Rutina de ejemplo: `app/datos/ejemplo.json` (atleta EJEMPLO, no es una gimnasta real), una vez por equipo.
 - Al cambiar JS/CSS, subir el `?v=` en `app/index.html`/`app/admin.html` y `CACHE` en `app/sw.js`.
 - Probar pantalla y PDF/impresión (fondo blanco, sin etiquetas de prueba) y los cálculos con casos límite antes de publicar.
+- Reglas: especificaciones con artículo, detección y casos de prueba en `fuentes/REGLAS_FIG_WAG.md` (FIG/Junior) y
+  `fuentes/REGLAS_USAG.md` (USAG N6–N10). Listas de elementos en `app/datos/fig_listas.json` y `usag_reglas.json` (`listas`).
+- Pruebas automáticas (correr antes de publicar cualquier cambio de cálculo): `pruebas/fig_test.js` (servidor estático en
+  :8791) y `pruebas/usag_test.js` (:8790), sirviendo esta carpeta: `setsid python3 -m http.server 8791 &` y
+  `NODE_PATH=$(npm root -g) node pruebas/fig_test.js`. Deben pasar todas.

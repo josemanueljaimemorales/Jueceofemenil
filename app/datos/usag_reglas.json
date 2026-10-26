@@ -910,5 +910,457 @@
   ],
   "fuente": "ERC FLOOR-1; AP7; AP8; TXQRG; EYMAN"
  },
- "sv_ejemplos_old_2022_26": "OLD GENERAL-24/25 trae ejemplos con la formula vieja (L10 base 9.50; L9 9.70; L6-8 10.0). NO usar sus bases; la mecanica de reemplazo/restringidos si sirve."
+ "sv_ejemplos_old_2022_26": "OLD GENERAL-24/25 trae ejemplos con la formula vieja (L10 base 9.50; L9 9.70; L6-8 10.0). NO usar sus bases; la mecanica de reemplazo/restringidos si sirve.",
+ "listas": {
+  "_nota": "Listas de números USAG que usa editor.js para detectar restringidos, requisitos (SR), CC y CV. Fuente: especificación REGLAS_USAG (ERC BARS/BEAM/FLOOR-1, AP7/AP8, EYMAN, TXQRG). [var] = depende de la variante que elija el juez.",
+  "UB": {
+   "perm_L6": [
+    "3.304",
+    "6.304",
+    "7.309"
+   ],
+   "perm_L78": [
+    "3.304",
+    "6.304",
+    "7.309",
+    "3.305"
+   ],
+   "perm_L9": [
+    "3.405",
+    "6.404",
+    "7.409",
+    "4.403",
+    "2.403",
+    "5.402",
+    "6.401",
+    "7.408"
+   ],
+   "vuelo_bs_bi": [
+    "2.205",
+    "2.305",
+    "2.405",
+    "2.306",
+    "2.406",
+    "3.203",
+    "3.303",
+    "3.403",
+    "3.503",
+    "3.406",
+    "4.204",
+    "4.304",
+    "4.404",
+    "4.504",
+    "4.406",
+    "4.506",
+    "5.303",
+    "5.403",
+    "5.503",
+    "6.302",
+    "6.402",
+    "7.203",
+    "7.305"
+   ],
+   "vuelo_bi_bs": [
+    "2.202",
+    "2.402",
+    "3.301",
+    "3.401",
+    "3.501",
+    "3.408",
+    "6.305",
+    "6.405",
+    "7.301",
+    "7.310",
+    "7.313",
+    "7.410",
+    "7.510"
+   ],
+   "vuelo_misma": [
+    "2.204",
+    "2.304",
+    "2.404",
+    "2.302",
+    "2.502",
+    "3.202",
+    "3.502",
+    "4.405",
+    "4.505",
+    "4.407",
+    "4.507",
+    "5.305",
+    "5.405",
+    "5.505",
+    "5.306",
+    "5.406",
+    "5.404",
+    "5.504",
+    "7.102",
+    "7.202",
+    "7.401",
+    "7.406",
+    "7.407",
+    "7.511"
+   ],
+   "vuelo_entrada": [
+    "1.108",
+    "1.208",
+    "1.209",
+    "1.215",
+    "1.307",
+    "1.310",
+    "1.410",
+    "1.311",
+    "1.411",
+    "1.412",
+    "1.512",
+    "1.413",
+    "1.513"
+   ],
+   "cambio_barra": [
+    "1.201",
+    "1.202",
+    "1.204",
+    "1.205",
+    "1.304",
+    "1.302",
+    "7.204",
+    "7.206",
+    "6.202"
+   ],
+   "circulo_367": [
+    "3.105",
+    "3.204",
+    "3.205",
+    "3.304",
+    "3.305",
+    "3.404",
+    "3.405",
+    "3.505",
+    "3.207",
+    "3.407",
+    "6.101",
+    "6.201",
+    "6.301",
+    "6.401",
+    "6.501",
+    "6.104",
+    "6.204",
+    "6.304",
+    "6.404",
+    "6.504",
+    "6.303",
+    "6.403",
+    "6.503",
+    "7.104",
+    "7.106",
+    "7.306",
+    "7.308",
+    "7.408",
+    "7.109",
+    "7.209",
+    "7.309",
+    "7.409",
+    "7.509",
+    "7.412",
+    "7.512",
+    "7.213",
+    "7.413",
+    "7.513",
+    "7.404",
+    "7.504"
+   ],
+   "gigantes": [
+    "4.102",
+    "4.202",
+    "4.302",
+    "4.303",
+    "4.402",
+    "4.403",
+    "4.502",
+    "4.503",
+    "5.202",
+    "5.302",
+    "5.402",
+    "5.407",
+    "5.507"
+   ],
+   "cv10_sueltas": [
+    "3.401",
+    "6.405",
+    "7.410",
+    "7.510",
+    "2.406",
+    "4.406",
+    "4.506",
+    "5.503"
+   ],
+   "cv10_hs": [
+    "3.304",
+    "3.305",
+    "6.301",
+    "6.304",
+    "7.308",
+    "7.309"
+   ],
+   "cast_hs": [
+    "2.201",
+    "2.301",
+    "2.401"
+   ],
+   "adelante": [
+    "5.202",
+    "5.302",
+    "5.402",
+    "5.407",
+    "5.507",
+    "6.101",
+    "6.201",
+    "6.301",
+    "6.401",
+    "6.501",
+    "6.303",
+    "6.403",
+    "6.503",
+    "7.308",
+    "7.408",
+    "7.412",
+    "7.512",
+    "3.207",
+    "3.407"
+   ]
+  },
+  "BB": {
+   "vuelo_extra": [
+    "6.201"
+   ],
+   "salto180_excluir": [
+    "2.101",
+    "2.105"
+   ],
+   "giro360_excluir": [
+    "3.107",
+    "3.207",
+    "3.208",
+    "3.308"
+   ],
+   "salida_no_mortal": [
+    "9.101",
+    "9.201",
+    "9.301",
+    "9.103",
+    "9.203"
+   ],
+   "forma_agrupado": [
+    "2.110",
+    "2.210",
+    "2.310",
+    "2.410",
+    "2.510",
+    "2.111",
+    "2.211",
+    "2.311",
+    "2.411",
+    "2.511",
+    "2.105"
+   ],
+   "forma_abierto": [
+    "2.202",
+    "2.302",
+    "2.402",
+    "2.502",
+    "2.203",
+    "2.303",
+    "2.403",
+    "2.503"
+   ]
+  },
+  "FX": {
+   "leap180": [
+    "1.101",
+    "1.202",
+    "1.203",
+    "1.204",
+    "1.304",
+    "1.305",
+    "1.109",
+    "1.209",
+    "1.309",
+    "1.409",
+    "1.210",
+    "1.310",
+    "1.311"
+   ],
+   "vuelo_extra": [
+    "4.101",
+    "4.201",
+    "4.301"
+   ],
+   "aereos": [
+    "5.103",
+    "5.303"
+   ],
+   "atras_extra": [
+    "7.201"
+   ],
+   "adelante_extra": [
+    "7.101",
+    "7.202"
+   ],
+   "giro_excluir": [
+    "2.207",
+    "2.308"
+   ],
+   "forma_agrupado": [
+    "1.115",
+    "1.215",
+    "1.315",
+    "1.415",
+    "1.116",
+    "1.216",
+    "1.316",
+    "1.416",
+    "1.516",
+    "1.104"
+   ],
+   "forma_abierto": [
+    "1.207",
+    "1.307",
+    "1.407"
+   ]
+  },
+  "variantes": {
+   "BARRAS|2.201": [
+    {
+     "id": "m",
+     "t": "Con ½ giro en la parada (en USAG vale C)",
+     "l": "C",
+     "giro": true,
+     "perm78": true
+    }
+   ],
+   "BARRAS|3.305": [
+    {
+     "id": "healy",
+     "t": "Healy (1/1 sobre un brazo): restringido en N7/N8",
+     "perm78": false
+    }
+   ],
+   "BARRAS|6.304": [
+    {
+     "id": "m",
+     "t": "Con ½ giro a toma regular",
+     "giro": true,
+     "perm6": false,
+     "perm78": true
+    },
+    {
+     "id": "healy",
+     "t": "Healy (1/1 sobre un brazo)",
+     "giro": true,
+     "perm6": false,
+     "perm78": false
+    }
+   ],
+   "BARRAS|7.309": [
+    {
+     "id": "m",
+     "t": "Con ½ giro a toma regular",
+     "giro": true,
+     "perm6": false,
+     "perm78": true
+    },
+    {
+     "id": "healy",
+     "t": "Healy (1/1 sobre un brazo)",
+     "giro": true,
+     "perm6": false,
+     "perm78": false
+    }
+   ],
+   "BARRAS|6.404": [
+    {
+     "id": "hop",
+     "t": "Con cambio de toma con salto (hop-grip): no es D permitido en N9",
+     "perm9": false
+    }
+   ],
+   "BARRAS|7.409": [
+    {
+     "id": "hop",
+     "t": "Con cambio de toma con salto (hop): no es D permitido en N9",
+     "perm9": false
+    }
+   ],
+   "BARRAS|2.403": [
+    {
+     "id": "mccalla",
+     "t": "McCalla (con salto de toma): no es D permitido en N9",
+     "perm9": false
+    }
+   ],
+   "BARRAS|5.402": [
+    {
+     "id": "galloway",
+     "t": "Galloway (toma regular): no es D permitido en N9",
+     "perm9": false
+    }
+   ],
+   "BARRAS|6.401": [
+    {
+     "id": "boniforti",
+     "t": "Boniforti (toma regular): no es D permitido en N9",
+     "perm9": false
+    }
+   ],
+   "BARRAS|7.103": [
+    {
+     "id": "cb",
+     "t": "Con cambio de toma a colgarse en BS (cambio de barra)",
+     "cb": true
+    }
+   ],
+   "BARRAS|7.104": [
+    {
+     "id": "cb",
+     "t": "En BI con cambio de toma a colgarse en BS (cambio de barra)",
+     "cb": true
+    }
+   ],
+   "BARRAS|7.106": [
+    {
+     "id": "cb",
+     "t": "En BI con cambio de toma a colgarse en BS (cambio de barra)",
+     "cb": true
+    }
+   ],
+   "BARRAS|1.106": [
+    {
+     "id": "cb",
+     "t": "Con cambio de toma de BS a colgarse en BI (cambio de barra)",
+     "cb": true
+    }
+   ],
+   "PISO|8.101": [
+    {
+     "id": "ext",
+     "t": "Extendido sin giro, llega a 2 pies (SR de N7)",
+     "ext": true
+    }
+   ],
+   "PISO|6.201": [
+    {
+     "id": "ext",
+     "t": "Extendido sin giro, llega a 2 pies (SR de N7)",
+     "ext": true
+    }
+   ],
+   "PISO|8.105": [
+    {
+     "id": "ext",
+     "t": "Extendido sin giro, llega a 2 pies (SR de N7)",
+     "ext": true
+    }
+   ]
+  }
+ }
 }

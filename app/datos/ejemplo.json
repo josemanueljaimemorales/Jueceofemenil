@@ -1,0 +1,115 @@
+{
+  "nota": "Rutina de ejemplo para conocer el editor (no corresponde a una gimnasta real). Aparece una sola vez en cada equipo; si el juez la borra, no vuelve.",
+  "nombre": "EJEMPLO",
+  "nivel": "FIG",
+  "r": {
+    "SALTO": [
+      {
+        "k": "F|SALTO|4.35",
+        "n": "Amanar"
+      }
+    ],
+    "BARRAS": [
+      {
+        "k": "F|BARRAS|1.101",
+        "n": "Kip a barra inferior"
+      },
+      {
+        "k": "F|BARRAS|2.201",
+        "n": "Cast a parada de manos"
+      },
+      {
+        "k": "F|BARRAS|3.403",
+        "n": "Tkatchev",
+        "c": true
+      },
+      {
+        "k": "F|BARRAS|3.407",
+        "n": "Ejova"
+      },
+      {
+        "k": "F|BARRAS|4.405",
+        "n": "Stalder a parada"
+      },
+      {
+        "k": "F|BARRAS|2.406",
+        "n": "Shaposhnikova"
+      },
+      {
+        "k": "F|BARRAS|6.505",
+        "n": "Doble atrás agrupado con 1½ (Mustafina)"
+      }
+    ],
+    "VIGA": [
+      {
+        "k": "F|VIGA|5.202",
+        "n": "Flic-flac",
+        "c": true
+      },
+      {
+        "k": "F|VIGA|5.512",
+        "n": "Mortal atrás extendido"
+      },
+      {
+        "k": "F|VIGA|2.505",
+        "n": "Zancada con cambio a anillo",
+        "c": true
+      },
+      {
+        "k": "F|VIGA|2.208",
+        "n": "Sissone a anillo"
+      },
+      {
+        "k": "F|VIGA|3.101",
+        "n": "Giro 1/1"
+      },
+      {
+        "k": "F|VIGA|3.302",
+        "n": "Giro 1/1 en attitude"
+      },
+      {
+        "k": "F|VIGA|2.101",
+        "n": "Zancada adelante"
+      },
+      {
+        "k": "F|VIGA|6.505",
+        "n": "Doble atrás carpado (salida)"
+      }
+    ],
+    "PISO": [
+      {
+        "k": "F|PISO|5.603",
+        "n": "Doble atrás extendido"
+      },
+      {
+        "k": "F|PISO|1.404",
+        "n": "Zancada con cambio con 1/1"
+      },
+      {
+        "k": "F|PISO|5.401",
+        "n": "Mortal atrás extendido 2½",
+        "c": true
+      },
+      {
+        "k": "F|PISO|4.302",
+        "n": "Mortal adelante extendido 1/1"
+      },
+      {
+        "k": "F|PISO|2.201",
+        "n": "Giro 2/1"
+      },
+      {
+        "k": "F|PISO|1.304",
+        "n": "Frolova"
+      },
+      {
+        "k": "F|PISO|1.310",
+        "n": "Salto extendido 2/1"
+      },
+      {
+        "k": "F|PISO|5.402",
+        "n": "Doble atrás agrupado"
+      }
+    ]
+  }
+}

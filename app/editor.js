@@ -805,10 +805,12 @@ function computeUSAG(a,ap){
   // [G-05] Requisitos especiales: detección automática; el juez puede marcar o desmarcar (a.sr[ap][id]).
   const man=(a.sr&&a.sr[ap])||{};
   const srDet=srUSAG(L,ap,items).map(s=>{const m=typeof man[s.id]==='boolean'?man[s.id]:null;return{...s,m,hit:m===true||(m!==false&&s.auto)};});
-  let srU=0;const grp={};srDet.forEach(s=>{if(s.hit)return;if(s.grp)grp[s.grp]=(grp[s.grp]||0)+1;else srU++;});for(const g in grp)srU+=Math.min(grp[g],2);
+  // Requisitos dobles (barras N7/N8 "2/3", piso N7 "1/2") valen 2 requisitos: si falta cualquier parte se descuenta
+  // −1.00 completo (criterio confirmado por la juez, 27-oct-2026).
+  let srU=0;const grp={};srDet.forEach(s=>{if(s.hit)return;const g=s.grp||(s.doble?'doble':null);if(g)grp[g]=1;else srU++;});srU+=2*Object.keys(grp).length;
   const srDed=r2(srU*.5);
-  if(srDet.some(s=>s.doble))notes.push('El SR doble (2/3) se cuenta como 2 requisitos de 0.50: falta 0.50 por cada parte que no se cumpla (por confirmar con el código 2026-30).');
-  if(srDet.some(s=>s.grp==='fx7'))notes.push('N7 piso, SR 1/2 (2 requisitos): −0.50 por cada condición que falte, máximo −1.00 (reparto por confirmar con el código 2026-30).');
+  if(srDet.some(s=>s.doble))notes.push('SR doble (2/3): vale 2 requisitos; si falta cualquiera de las dos partes se descuenta −1.00.');
+  if(srDet.some(s=>s.grp==='fx7'))notes.push('N7 piso, SR 1/2: vale 2 requisitos; si falta cualquier condición se descuenta −1.00.');
   // [G-14] Crédito de composición
   const ccMax=G.cc_max?.[L]||0,ccm=(a.cc&&a.cc[ap])||{};
   const ccDet=ccMax?ccUSAG(L,ap,items).map(c=>{const m=typeof ccm[c.id]==='boolean'?ccm[c.id]:null;return{...c,m,hit:m===true||(m!==false&&c.auto)};}):[];

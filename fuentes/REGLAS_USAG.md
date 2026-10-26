@@ -1491,3 +1491,6 @@ Estado frente a `editor.js`, por campo "Estado" de cada regla:
 | falta | 12, más los avisos de composición y tiempos |
 
 Las demás son reglas de detalle que heredan el estado de su regla padre.
+
+## Criterios confirmados por la juez
+- 27-oct-2026: requisitos especiales dobles (barras N7/N8 "2/3", piso N7 "1/2"): si falta cualquier parte se descuenta −1.00 completo (no −0.50 por parte).

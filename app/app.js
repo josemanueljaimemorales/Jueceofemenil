@@ -87,10 +87,10 @@ async function abrir(){
   gate.hidden=false;gate.innerHTML='<p class="loading">Abriendo el editor…</p>';
   try{
     const get=u=>fetch(u,{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error('No se pudo cargar '+u);return r.json();});
-    const [fig,us,usv,usr]=await Promise.all(['elementos_fig_wag','usag_elementos','usag_saltos','usag_reglas'].map(f=>get('datos/'+f+'.json')));
+    const [fig,us,usv,usr,figl]=await Promise.all(['elementos_fig_wag','usag_elementos','usag_saltos','usag_reglas','fig_listas'].map(f=>get('datos/'+f+'.json')));
     if(conLicencia()&&!leer(LS_LIC))return;   // se bloqueó mientras cargaba
     gate.hidden=true;ed.hidden=false;abierto=true;
-    iniciarEditor({fig,us,usv,usr});
+    iniciarEditor({fig,us,usv,usr,figl});
     cargarEjemplo();
   }catch(err){console.error(err);
     gate.innerHTML=`${TITULO}<div class="box"><div class="msg bad">${escA(err.message||MSG.red)}</div><button class="btn full" onclick="location.reload()">Reintentar</button></div>`;return;}

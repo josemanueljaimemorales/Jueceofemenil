@@ -1,6 +1,6 @@
 /* Para que la app abra sin internet: guarda una copia de cada archivo de la app y del Código.
    Siempre intenta primero la versión nueva (así llegan las actualizaciones) y, sin conexión, usa la copia. */
-const CACHE='jueceogaf-v2';
+const CACHE='jueceogaf-v3';
 self.addEventListener('install',e=>self.skipWaiting());
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{

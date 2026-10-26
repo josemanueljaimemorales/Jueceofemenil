@@ -1134,7 +1134,7 @@
    "nom": null,
    "grupo_nombre": "1.000 — MOUNTS",
    "p": 75,
-   "junior_prohibido": "revisar"
+   "junior_prohibido": "seguro"
   },
   "BARRAS|1.307": {
    "ap": "BARRAS",
@@ -1158,7 +1158,7 @@
    "nom": null,
    "grupo_nombre": "1.000 — MOUNTS",
    "p": 75,
-   "junior_prohibido": "revisar"
+   "junior_prohibido": "seguro"
   },
   "BARRAS|1.208": {
    "ap": "BARRAS",
@@ -1226,7 +1226,7 @@
    "nom": null,
    "grupo_nombre": "1.000 — MOUNTS",
    "p": 76,
-   "junior_prohibido": "revisar"
+   "junior_prohibido": "seguro"
   },
   "BARRAS|1.709": {
    "ap": "BARRAS",
@@ -1238,7 +1238,7 @@
    "nom": null,
    "grupo_nombre": "1.000 — MOUNTS",
    "p": 76,
-   "junior_prohibido": "revisar"
+   "junior_prohibido": "seguro"
   },
   "BARRAS|1.210": {
    "ap": "BARRAS",
@@ -3038,8 +3038,9 @@
    "d": "Salto con 1/1 giro (360º) en la fase de vuelo a la posición de pie, carrera desde el extremo o diagonal",
    "nom": null,
    "grupo_nombre": "1.000 ― MOUNTS",
-   "tipo": "acro",
-   "p": 108
+   "tipo": "danza",
+   "p": 108,
+   "rot": "cuenta_como_danza"
   },
   "VIGA|1.103": {
    "ap": "VIGA",
@@ -3141,8 +3142,10 @@
    "d": "Zancada con cambio de pierna y ½ giro (180º) separado de la viga antes de apoyar en spagate transversal libre – carrera diagonal a la viga\n(Dick)",
    "nom": "Dick",
    "grupo_nombre": "1.000 ― MOUNTS",
-   "tipo": "acro",
-   "p": 109
+   "tipo": "danza",
+   "p": 109,
+   "rot": "cuenta_como_danza",
+   "junior_prohibido": "revisar"
   },
   "VIGA|1.106": {
    "ap": "VIGA",
@@ -3889,7 +3892,8 @@
    "nom": "Yang Bo",
    "grupo_nombre": "2.000 — GYMNASTIC LEAPS, JUMPS AND HOPS",
    "tipo": "danza",
-   "p": 123
+   "p": 123,
+   "rot": "mismo_recuadro_dv_una_vez"
   },
   "VIGA|2.209": {
    "ap": "VIGA",
@@ -6793,7 +6797,7 @@
    {
     "id": "BARRAS|1.207",
     "regla": "UB – salto & DMT with take-off from two feet",
-    "seguro": false,
+    "seguro": true,
     "nota": "entrada con mortal desde el trampolín/suelo; si la celda tiene variantes, solo aplica a la de mortal"
    },
    {
@@ -6805,7 +6809,7 @@
    {
     "id": "BARRAS|1.407",
     "regla": "UB – salto & DMT with take-off from two feet",
-    "seguro": false,
+    "seguro": true,
     "nota": "entrada con mortal desde el trampolín/suelo; si la celda tiene variantes, solo aplica a la de mortal"
    },
    {
@@ -6817,13 +6821,13 @@
    {
     "id": "BARRAS|1.609",
     "regla": "UB – salto & DMT with take-off from two feet",
-    "seguro": false,
+    "seguro": true,
     "nota": "entrada con mortal desde el trampolín/suelo; si la celda tiene variantes, solo aplica a la de mortal"
    },
    {
     "id": "BARRAS|1.709",
     "regla": "UB – salto & DMT with take-off from two feet",
-    "seguro": false,
+    "seguro": true,
     "nota": "entrada con mortal desde el trampolín/suelo; si la celda tiene variantes, solo aplica a la de mortal"
    },
    {
@@ -6859,6 +6863,12 @@
     "id": "PISO|3.102",
     "regla": "FX – acro elements with sideward take off and/or landing into roll",
     "seguro": false
+   },
+   {
+    "id": "VIGA|1.405",
+    "regla": "BB – dance elements with cross sit landing on BB",
+    "seguro": false,
+    "nota": "probable (Dick con ½ a sentada en split transversal)"
    }
   ],
   "nota_candidatos": "El CoP da reglas generales, no una lista de números. 'seguro' = el texto del elemento cumple la regla; 'revisar' = aplicación dudosa (p. ej. solo una variante de la celda). Ningún salto de la tabla tiene entrada o caída lateral.",
@@ -6873,6 +6883,7 @@
     "1-2": -8.0,
     "0": -10.0
    }
-  }
+  },
+  "nota_editor": "editor.js usa la lista datos/fig_listas.json → junior_prohibidos (con variantes)."
  }
 }

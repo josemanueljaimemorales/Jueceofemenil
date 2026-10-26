@@ -78,12 +78,27 @@
     ],
     "PISO": [
       {
+        "k": "F|PISO|3.106",
+        "n": "Rondada",
+        "c": true
+      },
+      {
+        "k": "F|PISO|3.107",
+        "n": "Flic-flac",
+        "c": true
+      },
+      {
         "k": "F|PISO|5.603",
         "n": "Doble atrás extendido"
       },
       {
         "k": "F|PISO|1.404",
-        "n": "Zancada con cambio con 1/1"
+        "n": "Zancada con cambio con 1/1",
+        "c": true
+      },
+      {
+        "k": "F|PISO|1.304",
+        "n": "Frolova"
       },
       {
         "k": "F|PISO|5.401",
@@ -99,12 +114,18 @@
         "n": "Giro 2/1"
       },
       {
-        "k": "F|PISO|1.304",
-        "n": "Frolova"
-      },
-      {
         "k": "F|PISO|1.310",
         "n": "Salto extendido 2/1"
+      },
+      {
+        "k": "F|PISO|3.106",
+        "n": "Rondada",
+        "c": true
+      },
+      {
+        "k": "F|PISO|3.107",
+        "n": "Flic-flac",
+        "c": true
       },
       {
         "k": "F|PISO|5.402",

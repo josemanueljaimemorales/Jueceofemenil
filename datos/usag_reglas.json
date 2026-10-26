@@ -1,0 +1,914 @@
+{
+ "_fuentes": {
+  "ERC": "Event Rules Charts L6-10, Dev COP 2026-30 (eventrulescharts6_10.pdf): VAULT-1, BARS-1, BEAM-1, FLOOR-1",
+  "AP7": "Appendix 7 Cheat Sheet L9/L10 (2026-2030)",
+  "AP8": "Appendix 8 Cheat Sheet L6/7/8 (2026-2030)",
+  "AP1-3": "Appendix 1/2/3 Vault values L10/L9/L6-8",
+  "AP11-14": "Scoresheets (AP11 L9/10, AP12 L6/7/8, AP13 vault L8-10, AP14 vault L6/7)",
+  "CHG26": "26changedvalues.pdf",
+  "DEVUPD": "rules/dev_update_2026-27.pdf",
+  "MIN25": "minutes_dpc_051225_tech (Joint Dev/Tech 12-may-2025)",
+  "MIN26": "minutes_dpc_051126_tech (11-may-2026)",
+  "OLD": "Dev COP 2022-26 revised pages 4-ago-2025 (historico/), GENERAL-23/24/25: reglas generales probablemente vigentes, VERIFICAR en COP 2026-30",
+  "TXQRG": "extra/qrg_*_6.1.pdf (A. Stroud, TX NAWGJ, may-2026, no oficial)",
+  "EYMAN": "extra/eyman_scoresheets/*.pdf (J. Eyman, ago-2026, no oficial)"
+ },
+ "general": {
+  "valor_vp": {
+   "A": 0.1,
+   "B": 0.3,
+   "C": 0.5,
+   "fuente": "ERC BARS/BEAM/FLOOR-1"
+  },
+  "vp_requeridos": {
+   "6": {
+    "A": 4,
+    "B": 2,
+    "C": 0
+   },
+   "7": {
+    "A": 4,
+    "B": 3,
+    "C": 0
+   },
+   "8": {
+    "A": 4,
+    "B": 4,
+    "C": 0
+   },
+   "9": {
+    "A": 3,
+    "B": 4,
+    "C": 1
+   },
+   "10": {
+    "A": 3,
+    "B": 3,
+    "C": 2
+   },
+   "fuente": "ERC; AP7/AP8 'Content'"
+  },
+  "sv_base": {
+   "6": 10.0,
+   "7": 10.0,
+   "8": 9.8,
+   "9": 9.5,
+   "10": 9.2,
+   "nota": "Es el SV con todos los VP y SR; luego se suman CC y bono; maximo 10.00 (el +0.10 extra de L10 va aparte, fuera del SV).",
+   "fuente": "ERC; AP7/AP8"
+  },
+  "cc_max": {
+   "6": 0,
+   "7": 0,
+   "8": 0.2,
+   "9": 0.2,
+   "10": 0.3,
+   "fuente": "ERC; AP7/AP8"
+  },
+  "bono_max": {
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 0.3,
+   "10": 0.5,
+   "detalle": {
+    "9": "0.30 CV, o 0.20 CV + 0.10 DV; solo el 1er D/E (UB cualquier D/E; BB/FX D/E acro) da DV +0.10",
+    "10": "max 0.50 de CV+DV con minimo +0.10 DV y +0.10 CV"
+   },
+   "fuente": "ERC; AP7"
+  },
+  "dv_bono": {
+   "9": {
+    "D": 0.1,
+    "E": 0.1,
+    "solo_primero": true
+   },
+   "10": {
+    "D": 0.1,
+    "E": 0.2
+   },
+   "fuente": "OLD GENERAL-15 (D +0.10; E +0.20 L10 / +0.10 L9); AP7 'L9: 1st elig/rest. D/E +.10'",
+   "verificar": "valor de E en L10 (+0.20) no aparece en documentos 2026 publicos"
+  },
+  "formula_sv": "SV = sv_base(nivel) - sum(VP faltantes: A 0.10, B 0.30, C 0.50) - 0.50*SR_faltantes - 0.50*restringidos + CC + bono(CV+DV, con tope) ; tope 10.00. L10: +0.10 extra fuera del SV si se cumple la regla 'bono_extra_L10'.",
+  "orden_calculo_eyman": "BASE = SV_base - VP - SR (- restringido) ; + DV + CV (tope) ; + CC habilidades ; + CC salida/danza = SV final (EYMAN)",
+  "sr": {
+   "valor": 0.5,
+   "por_aparato": 4,
+   "un_elemento_puede_cumplir_varios": "si, salvo que se indique (ERC BARS-1)",
+   "requiere_vp": "un elemento debe recibir VP para cumplir SR (OLD GENERAL-15)"
+  },
+  "restringido": {
+   "deduccion_sv": 0.5,
+   "efecto": "sin VP, SR ni CC (AP8 'No VP/SR/CC'); cronologico: solo el 1er restringido permitido por nivel recibe credito (L8 un C; L9 un D/E)",
+   "detalle_old": "L8/L9: el mismo restringido puede repetirse si la 1a vez recibio 0 VP; L6/7: un restringido intentado aunque incompleto se deduce y no puede repetirse (OLD GENERAL-23)",
+   "fuente": "ERC; AP8; OLD"
+  },
+  "sustitucion": {
+   "regla": "Un VP mayor puede reemplazar a uno menor, nunca al reves; 1 a 1 sin importar el valor (OLD GENERAL-15).",
+   "permitidos_como": {
+    "6": "C permitidos valen B",
+    "7": "C permitidos valen B",
+    "8": "C permitidos (y el restringido permitido) valen B",
+    "9": "D/E permitidos (y el 1er D/E restringido) valen C; cuentan como C para CV y CC",
+    "10": "D/E pueden reemplazar A/B/C y aun asi dan bono DV"
+   },
+   "fuente": "ERC 'Allowable C's = B value' / 'D/E's = C value'; AP7 'L9: Allowable D/E=C'; EYMAN; OLD"
+  },
+  "repeticion": "Cada elemento da VP max 2 veces y solo si la 2a vez va en conexion distinta (aislado vs conectado, o precedido/seguido de elemento distinto; mismo par en orden inverso cuenta como distinto). 3a vez o misma conexion: sin VP, sin SR, sin CV. (OLD GENERAL-15). BB/TXQRG: un elemento hecho por 3a vez (0 VP) conectado a la salida si sirve para CC de salida.",
+  "ejercicio_corto": {
+   "UB": "menos de 5 VP: juez jefe -2.00 (y se restan VP/SR faltantes)",
+   "BB_FX": "menos de 30 s: -2.00",
+   "L6_BB": "L6 viga completa <30 s con todos los VP y SV 10.0: -0.50 (no -2.00)",
+   "fuente": "AP7; AP8"
+  },
+  "sin_salida": "Ya NO se descuentan 0.30 del SV por falta de salida (MIN25 #22; OLD GENERAL-23 'No longer a deduction'). Pero falta el SR de salida (-0.50) y el VP.",
+  "cc_con_caida": "Elementos con VP aunque tengan caida o spot en el aterrizaje cuentan para CC (TXQRG; EYMAN).",
+  "tiempos": {
+   "BB": {
+    "6-7": "1:20",
+    "8-10": "1:30"
+   },
+   "FX": {
+    "6-7": "1:20",
+    "8-10": "1:30"
+   },
+   "sobretiempo": 0.1,
+   "fuente": "ERC BEAM-1/FLOOR-1; AP7"
+  },
+  "rango_jueces": "9.50-10.0: 0.20; 9.0-9.475: 0.50; 8.0-8.975: 0.70; <8.0: 1.00; nota minima 1.00 (AP7/AP8)",
+  "bono_extra_L10": {
+   "valor": 0.1,
+   "fuera_del_sv": true,
+   "condiciones": [
+    "SV 10.00 con todos los VP, SR y CC",
+    "bono total (CV+DV) >= 0.60",
+    "UB: una suelta D de una sola barra o cualquier suelta E (no salida)",
+    "BB: un elemento acro E (incluye salida)",
+    "FX: un elemento acro E; el 6.501 (mortal adelante 2/1) NO cuenta"
+   ],
+   "fuente": "ERC; AP7; TXQRG"
+  }
+ },
+ "VT": {
+  "tablas": "ver usag_saltos.json",
+  "6": {
+   "permitidos": [
+    "1.111",
+    "3.116",
+    "4.111"
+   ],
+   "sv": 10.0,
+   "spot": {
+    "durante": "VOID",
+    "al_aterrizar": 0.5,
+    "despues": 0
+   },
+   "nota": "L6 solo llegada de pie al mat stack"
+  },
+  "7": {
+   "permitidos": [
+    "1.111",
+    "3.116",
+    "4.111"
+   ],
+   "sv": 10.0,
+   "spot": {
+    "durante": "VOID",
+    "al_aterrizar": 0.5,
+    "despues": 0
+   },
+   "nota": "3.116 y 4.111 pueden llegar de espalda"
+  },
+  "8": {
+   "tabla": "AP3",
+   "spot": {
+    "durante": "VOID",
+    "excepcion": "spot en 2o vuelo de salto con mortal: -1.00"
+   }
+  },
+  "9": {
+   "tabla": "AP2",
+   "spot": {
+    "durante": "VOID",
+    "al_aterrizar": 0.5
+   }
+  },
+  "10": {
+   "tabla": "AP1",
+   "spot": {
+    "durante": "VOID",
+    "al_aterrizar": 0.5
+   },
+   "bono": "+0.10 a todo salto de 10.0 sin caida ni spot, salvo 2.302, 2.311, 3.407, 4.306, 4.309, 4.403, 4.407, 5.301, 5.408, 5.409"
+  },
+  "void": [
+   "salto no listado para el nivel",
+   "L6-9: si cualquiera de los 2 saltos no esta permitido, todo el evento VOID",
+   "balk #2 o #3",
+   "apoyo/descanso sobre la mesa",
+   "no usar safety zone mat (gr 4/5)",
+   "trampolin alternativo",
+   "sin contacto de manos",
+   "no aterrizar primero con los pies",
+   "aterrizar sobre la mesa"
+  ],
+  "fuente": "ERC VAULT-1; AP1-3; AP13"
+ },
+ "UB": {
+  "6": {
+   "sr": [
+    {
+     "n": 1,
+     "texto": "Un cast min. 45° sobre la horizontal (SR si pasa la horizontal; deducciones de angulo bajo 45°)"
+    },
+    {
+     "n": 2,
+     "texto": "Min. un cambio de barra"
+    },
+    {
+     "n": 3,
+     "texto": "Un circulo libre de 360° de los grupos 3/6/7 (sin cadera en la barra)"
+    },
+    {
+     "n": 4,
+     "texto": "Salida en mortal min. A"
+    }
+   ],
+   "permitidos": "Todos los A/B sin vuelo/suelta + UNO de estos C: clear hip / stalder / pike sole circle atras a parada (vale B)",
+   "restringidos": "Cualquier otro C, todos los D/E, cualquier vuelo/suelta HB->LB o LB->HB",
+   "cc": null,
+   "bono": null
+  },
+  "7": {
+   "sr": [
+    {
+     "n": 1,
+     "texto": "Un cast a parada (SR desde 45°; deducciones de angulo)"
+    },
+    {
+     "n": "2/3",
+     "texto": "Dos circulos libres de 360° (mismos o distintos): uno min. B y otro de grupos 3/6/7"
+    },
+    {
+     "n": 4,
+     "texto": "Salida en mortal min. A"
+    }
+   ],
+   "permitidos": "Todos los A/B + cualquier numero de: cast a parada con 1/2; clear hip/stalder/pike sole circle atras a parada; esos circulos con 1/2 a toma regular (valen B)",
+   "restringidos": "Los demas C y todos los D/E",
+   "cc": null,
+   "bono": null
+  },
+  "8": {
+   "sr": [
+    {
+     "n": 1,
+     "texto": "Un cast a parada (TX: dentro de 20° de la vertical; cast a parada 1/2 tambien cumple giro LA)"
+    },
+    {
+     "n": "2/3",
+     "texto": "Dos B (mismos o distintos): a) un B con vuelo (no salida) O un B con giro LA min. 180° (no entrada/salida); Y b) un B circulo libre 360° de grupos 3/6/7 (no salida)"
+    },
+    {
+     "n": 4,
+     "texto": "Salida en mortal min. A"
+    }
+   ],
+   "permitidos": "Todos los A/B + cualquier numero de: cast a parada 1/2; clear hip/stalder/pike sole circle atras a parada; esos con 1/2 a toma regular (valen B) + UN C restringido (cronologico, vale B)",
+   "restringidos": "C adicionales y todos los D/E",
+   "cc": [
+    {
+     "valor": 0.1,
+     "tipo": "dificultad",
+     "regla": "conexion directa B+B (no cuenta #2.201 cast a parada)"
+    },
+    {
+     "valor": 0.1,
+     "tipo": "salida",
+     "regla": "salida B o mayor, O B o mayor conectado a salida A"
+    }
+   ],
+   "bono": null,
+   "composicion": [
+    {
+     "ded": 0.1,
+     "cada": true,
+     "texto": "elementos no caracteristicos"
+    },
+    {
+     "ded": 0.1,
+     "cada": true,
+     "texto": "3/4 gigante adelante (con o sin cambio de toma)"
+    },
+    {
+     "ded": 0.2,
+     "hasta": true,
+     "texto": "falta de elementos que alcancen/pasen la vertical"
+    }
+   ]
+  },
+  "9": {
+   "sr": [
+    {
+     "n": 1,
+     "texto": "Min. dos cambios de barra"
+    },
+    {
+     "n": 2,
+     "texto": "Un elemento con vuelo min. B (no salida)"
+    },
+    {
+     "n": 3,
+     "texto": "Segundo vuelo distinto min. C (no salida) O un elemento con giro LA (180°+) min. B (no entrada/salida)"
+    },
+    {
+     "n": 4,
+     "texto": "Salida en mortal min. B"
+    }
+   ],
+   "permitidos": "Todos los A/B/C + cualquier numero de elementos raiz B o C con 1/2 a toma cubital/L/mixta en parada o con 1/1 a parada (son D/E; valen C) + UN D/E restringido (cronologico)",
+   "restringidos": "D/E adicionales",
+   "cv": [
+    {
+     "valor": 0.1,
+     "regla": "C+C donde uno o ambos no tienen giro/vuelo (deben ser distintos)"
+    },
+    {
+     "valor": 0.2,
+     "regla": "C+C ambos con giro o vuelo"
+    }
+   ],
+   "cv_nota": "D/E permitidos y 1er restringido cuentan como C (EYMAN L9 bars; AP7)",
+   "dv": "+0.10 solo al primer D/E con VP (sin caida ni spot)",
+   "cc": [
+    {
+     "valor": 0.1,
+     "tipo": "dificultad",
+     "regla": "2 VP distintos C o mayor"
+    },
+    {
+     "valor": 0.1,
+     "tipo": "salida",
+     "regla": "salida C o mayor, O VP C o mayor conectado a salida B"
+    }
+   ],
+   "composicion": "ver UB.composicion_9_10"
+  },
+  "10": {
+   "sr": [
+    {
+     "n": 1,
+     "texto": "Vuelo min. C (no salida)"
+    },
+    {
+     "n": 2,
+     "texto": "Segundo vuelo distinto min. B (no salida)"
+    },
+    {
+     "n": 3,
+     "texto": "Elemento con giro LA min. C (no entrada/salida)"
+    },
+    {
+     "n": 4,
+     "texto": "Salida en mortal min. C"
+    }
+   ],
+   "permitidos": "Sin restricciones de dificultad",
+   "restringidos": null,
+   "cv": [
+    {
+     "valor": 0.1,
+     "regla": "C+C ambos con giro o vuelo"
+    },
+    {
+     "valor": 0.1,
+     "regla": "C+C dos circulos distintos de grupos 3/6/7 (sin giro/vuelo)"
+    },
+    {
+     "valor": 0.1,
+     "regla": "C+D (o C+E), sin requisito de giro/vuelo"
+    },
+    {
+     "valor": 0.2,
+     "regla": "D+D o mas dificil"
+    },
+    {
+     "valor": 0.2,
+     "regla": "suelta D/E + C de grupos 3/6/7 a parada, en ese orden, solo con 3.401, 6.405, 7.410, 7.510 (LB->HB) o 2.406, 4.406, 4.506, 5.503 (HB->LB)"
+    }
+   ],
+   "dv": {
+    "D": 0.1,
+    "E": 0.2
+   },
+   "cc": [
+    {
+     "valor": 0.2,
+     "tipo": "dificultad",
+     "regla": "2 sueltas D/E distintas (0.10 si solo una)"
+    },
+    {
+     "valor": 0.1,
+     "tipo": "salida",
+     "regla": "salida D o mayor, O D/E conectado a salida C"
+    }
+   ],
+   "composicion": "ver UB.composicion_9_10; ademas falta de 2 cambios de barra -0.20 (solo L10); mas de 1 squat/stoop en LB para saltar a HB -0.10 c/u (solo L10)"
+  },
+  "composicion_9_10": [
+   {
+    "ded": 0.1,
+    "texto": "mira a la misma direccion todo el ejercicio (sin entrada/salida)"
+   },
+   {
+    "ded": 0.1,
+    "cada": true,
+    "texto": "elementos no caracteristicos"
+   },
+   {
+    "ded": 0.1,
+    "cada": true,
+    "texto": "3/4 gigante adelante"
+   },
+   {
+    "ded": "0.10 si solo 1/4; 0.20 si 0/4",
+    "texto": "no hacer 2 de 4: elemento adelante min B; grupos 3/6/7 min B; giro LA 180°+ min C; suelta de una barra min D (sin salida; un elemento cumple una sola opcion)"
+   }
+  ],
+  "sueltas_vp": "Para VP: sueltas de una barra y LB->HB deben tocar la barra con 1 o 2 manos; HB->LB deben tocar LB con DOS manos (TXQRG)",
+  "fuente": "ERC BARS-1; AP7; AP8; MIN25 #10; TXQRG; EYMAN"
+ },
+ "BB": {
+  "6": {
+   "sr": [
+    {
+     "n": 1,
+     "texto": "Serie acro sin vuelo O un elemento acro con vuelo (aislado o conectado), sin entrada/salida"
+    },
+    {
+     "n": 2,
+     "texto": "Un salto/leap con 180° cruzado o lateral"
+    },
+    {
+     "n": 3,
+     "texto": "Giro min. 360° en un pie (grupo 3)"
+    },
+    {
+     "n": 4,
+     "texto": "Salida aerea o mortal min. A"
+    }
+   ],
+   "permitidos": "Todos los A/B + UN C de danza (cronologico, vale B)",
+   "restringidos": "C de danza adicionales; todos los C/D/E acro",
+   "cc": null,
+   "bono": null
+  },
+  "7": {
+   "sr": [
+    {
+     "n": 1,
+     "texto": "Serie acro (con o sin vuelo) Y un elemento acro con vuelo (aislado o conectado), sin entrada/salida"
+    },
+    {
+     "n": 2,
+     "texto": "Salto/leap 180°"
+    },
+    {
+     "n": 3,
+     "texto": "Giro 360° en un pie (grupo 3)"
+    },
+    {
+     "n": 4,
+     "texto": "Salida aerea/mortal min. A"
+    }
+   ],
+   "permitidos": "Todos los A/B + todos los C de danza (valen B)",
+   "restringidos": "D/E de danza; C/D/E acro",
+   "cc": null,
+   "bono": null
+  },
+  "8": {
+   "sr": [
+    {
+     "n": 1,
+     "texto": "Serie acro de 2 elementos, uno con vuelo (sin entrada/salida)"
+    },
+    {
+     "n": 2,
+     "texto": "Salto/leap 180°"
+    },
+    {
+     "n": 3,
+     "texto": "Giro 360° en un pie (grupo 3)"
+    },
+    {
+     "n": 4,
+     "texto": "Salida aerea/mortal min. A"
+    }
+   ],
+   "permitidos": "Todos los A/B, todos los C de danza (valen B), UN C acro restringido (incluye entrada/salida; cronologico)",
+   "restringidos": "D/E de danza; C acro adicionales; cualquier D/E acro",
+   "cc": [
+    {
+     "valor": 0.1,
+     "tipo": "dificultad",
+     "regla": "serie acro directa B+B, ambos con vuelo"
+    },
+    {
+     "valor": 0.1,
+     "tipo": "salida",
+     "regla": "salida B o mayor, O acro B + salida mortal A conectados"
+    }
+   ],
+   "composicion": [
+    {
+     "ded": 0.1,
+     "texto": "acro en una sola direccion (0.05 si la unica otra direccion es la salida)"
+    },
+    {
+     "ded": 0.1,
+     "texto": "mas de 1 pivote (pierna extendida) 1/2"
+    },
+    {
+     "ded": 0.1,
+     "cada_tipo": true,
+     "texto": "mas de 2 elementos de danza de la misma forma (tuck/wolf o straddle)"
+    },
+    {
+     "ded": 0.2,
+     "texto": "falta serie de danza (min 2 elementos de grupos 1, 2 o 3)"
+    }
+   ]
+  },
+  "9": {
+   "sr": [
+    {
+     "n": 1,
+     "texto": "Serie acro con min. 2 elementos con vuelo directos (sin entrada/salida)"
+    },
+    {
+     "n": 2,
+     "texto": "Salto/leap 180°"
+    },
+    {
+     "n": 3,
+     "texto": "Giro 360° en un pie (grupo 3)"
+    },
+    {
+     "n": 4,
+     "texto": "Salida aerea/mortal min. B"
+    }
+   ],
+   "permitidos": "Todos los A/B/C, todos los D/E de danza (valen C), UN D/E acro restringido (incluye entrada/salida; cronologico; vale C)",
+   "restringidos": "D/E acro adicionales",
+   "dv": "+0.10 solo al 1er D/E acro",
+   "cc": [
+    {
+     "valor": 0.1,
+     "tipo": "dificultad",
+     "regla": "2 VP acro distintos C o mayor (sin salida; Eyman: acro con vuelo)"
+    },
+    {
+     "valor": 0.1,
+     "tipo": "salida",
+     "regla": "salida C o mayor, O acro con vuelo min B o danza C conectado a salida B"
+    }
+   ]
+  },
+  "10": {
+   "sr": [
+    {
+     "n": 1,
+     "texto": "Serie acro (sin entrada/salida) con min. 2 vuelos directos, uno min. C (con o sin apoyo de manos) O un acro A sin vuelo (grupo 7) conectado directo a un acro con vuelo E"
+    },
+    {
+     "n": 2,
+     "texto": "Salto/leap 180°"
+    },
+    {
+     "n": 3,
+     "texto": "Giro 360° en un pie (grupo 3)"
+    },
+    {
+     "n": 4,
+     "texto": "Salida aerea/mortal min. C O salida B conectada directo a serie acro con min. C, o a elemento acro con vuelo/danza min. C"
+    }
+   ],
+   "permitidos": "Sin restricciones",
+   "dv": {
+    "D": 0.1,
+    "E": 0.2
+   },
+   "cc": [
+    {
+     "valor": 0.2,
+     "tipo": "dificultad",
+     "regla": "2 acro D/E distintos con vuelo, sin salida (0.10 si solo uno)"
+    },
+    {
+     "valor": 0.1,
+     "tipo": "salida",
+     "regla": "salida D/E (mortal/aerea), O acro con vuelo B o danza C conectados a salida C"
+    }
+   ]
+  },
+  "cv_9_10": {
+   "acro_vuelo_2": [
+    {
+     "valor": 0.1,
+     "regla": "B+C (C mortal/aereo), sin salida"
+    },
+    {
+     "valor": 0.2,
+     "regla": "B+D/E o C+C/D, sin salida (Eyman L10: BD, BE, CC, CD, DD)"
+    }
+   ],
+   "acro_vuelo_3": [
+    {
+     "valor": 0.1,
+     "regla": "B+B+C (puede incluir entrada/salida)"
+    },
+    {
+     "valor": 0.2,
+     "regla": "B+C+C o B+B+D (puede incluir salida)"
+    }
+   ],
+   "danza_o_mixto_2": [
+    {
+     "valor": 0.1,
+     "regla": "A+D o B+C (sin salida)"
+    },
+    {
+     "valor": 0.2,
+     "regla": "B+D o C+C/D"
+    }
+   ],
+   "giros_1_pie": [
+    {
+     "valor": 0.1,
+     "regla": "A+C o C+A"
+    }
+   ],
+   "serie_extra": {
+    "valor": 0.1,
+    "regla": "serie de 3 elementos acro con vuelo con min. un mortal/aereo C o un vuelo D/E (con o sin apoyo); no salida (entrada si)"
+   },
+   "nota": "L9: D/E permitidos y 1er D/E restringido valen C en CV.",
+   "fuente": "AP7; EYMAN; TXQRG"
+  },
+  "composicion_9_10": [
+   {
+    "ded": 0.1,
+    "texto": "acro en una sola direccion (bwd vs fwd/swd); 0.05 si la otra direccion solo esta en la salida"
+   },
+   {
+    "ded": 0.1,
+    "texto": "mas de 1 pivote (pierna extendida) 1/2"
+   },
+   {
+    "ded": 0.1,
+    "cada_tipo": true,
+    "texto": "mas de 2 elementos de danza de la misma forma"
+   },
+   {
+    "ded": 0.2,
+    "texto": "falta serie de danza (min 2 elementos de grupos 1, 2 o 3)"
+   }
+  ],
+  "nota_walkover": "Desde 2026-27 el requisito de 180° en walkovers no aplica si se hacen dentro de una serie acro (DEVUPD)",
+  "fuente": "ERC BEAM-1; AP7; AP8; TXQRG; EYMAN"
+ },
+ "FX": {
+  "6": {
+   "sr": [
+    {
+     "n": 1,
+     "texto": "Un pase acro con min. 2 vuelos directos, uno mortal"
+    },
+    {
+     "n": 2,
+     "texto": "Segundo pase acro con mortal distinto y min. 2 vuelos directos, uno mortal, O un mortal B aislado"
+    },
+    {
+     "n": 3,
+     "texto": "Pasaje de danza con min. 2 elementos distintos del grupo 1 (directo/indirecto), uno un leap con 180° cruzado/lateral"
+    },
+    {
+     "n": 4,
+     "texto": "Giro min. 360° en un pie"
+    }
+   ],
+   "permitidos": "Todos los A/B + UN C de danza (cronologico, vale B)",
+   "restringidos": "C de danza adicionales; todos los C/D/E acro",
+   "cc": null,
+   "bono": null
+  },
+  "7": {
+   "sr": [
+    {
+     "n": "1/2",
+     "texto": "Min. 2 pases acro: uno con min. 2 vuelos directos, uno mortal atras; uno con mortal adelante (se permiten elementos adicionales); y un mortal (adelante o atras) extendido sin giro con llegada a 2 pies"
+    },
+    {
+     "n": 3,
+     "texto": "Pasaje de danza (2 elementos distintos grupo 1, un leap 180°)"
+    },
+    {
+     "n": 4,
+     "texto": "Giro 360° en un pie"
+    }
+   ],
+   "permitidos": "Todos los A/B + todos los C de danza (valen B)",
+   "restringidos": "D/E de danza; C/D/E acro",
+   "cc": null,
+   "bono": null
+  },
+  "8": {
+   "sr": [
+    {
+     "n": 1,
+     "texto": "Pase acro con min. 2 mortales (iguales o distintos), directos o indirectos con vuelos (con/sin apoyo de manos)"
+    },
+    {
+     "n": 2,
+     "texto": "Tres mortales distintos (NO aereos)"
+    },
+    {
+     "n": 3,
+     "texto": "Pasaje de danza (2 elementos distintos grupo 1, un leap 180°)"
+    },
+    {
+     "n": 4,
+     "texto": "El ultimo pase acro iniciado debe tener min. un mortal A"
+    }
+   ],
+   "permitidos": "Todos los A/B, todos los C de danza (valen B), UN C acro restringido (cronologico)",
+   "restringidos": "D/E de danza; C acro adicionales; D/E acro",
+   "cc": [
+    {
+     "valor": 0.1,
+     "tipo": "acro",
+     "regla": "2 mortales distintos B o mayor Y 1 mortal A"
+    },
+    {
+     "valor": 0.1,
+     "tipo": "danza",
+     "regla": "2 VP de danza distintos B o mayor"
+    }
+   ],
+   "composicion": [
+    {
+     "ded": 0.1,
+     "texto": "mortales en una sola direccion (bwd vs fwd/swd)"
+    },
+    {
+     "ded": 0.1,
+     "cada_tipo": true,
+     "texto": "mas de 2 elementos de danza de la misma forma"
+    },
+    {
+     "ded": 0.2,
+     "texto": "falta giro en un pie min. B"
+    },
+    {
+     "ded": 0.2,
+     "texto": "falta min. un mortal B en el ejercicio"
+    }
+   ]
+  },
+  "9": {
+   "sr": [
+    {
+     "n": 1,
+     "texto": "Pase acro con min. 2 mortales (directos o indirectos)"
+    },
+    {
+     "n": 2,
+     "texto": "Tres mortales distintos (no aereos)"
+    },
+    {
+     "n": 3,
+     "texto": "Pasaje de danza (2 distintos grupo 1, un leap 180°)"
+    },
+    {
+     "n": 4,
+     "texto": "El ultimo pase acro iniciado debe tener min. un mortal B"
+    }
+   ],
+   "permitidos": "Todos los A/B/C, todos los D/E de danza (valen C), UN D/E acro restringido (cronologico; vale C; da +0.10 DV)",
+   "restringidos": "D/E acro adicionales",
+   "cc": [
+    {
+     "valor": 0.1,
+     "tipo": "acro",
+     "regla": "2 mortales distintos C o mayor Y 1 mortal B"
+    },
+    {
+     "valor": 0.1,
+     "tipo": "danza",
+     "regla": "2 VP de danza distintos C o mayor"
+    }
+   ],
+   "composicion": "ver FX.composicion_9_10 con 'falta mortal C' -0.20"
+  },
+  "10": {
+   "sr": [
+    {
+     "n": 1,
+     "texto": "Pase acro con min. 2 mortales (directos o indirectos)"
+    },
+    {
+     "n": 2,
+     "texto": "Tres mortales distintos (no aereos)"
+    },
+    {
+     "n": 3,
+     "texto": "Pasaje de danza (2 distintos grupo 1, un leap 180°)"
+    },
+    {
+     "n": 4,
+     "texto": "El ultimo pase acro iniciado debe tener min. un mortal C"
+    }
+   ],
+   "permitidos": "Sin restricciones",
+   "dv": {
+    "D": 0.1,
+    "E": 0.2
+   },
+   "cc": [
+    {
+     "valor": 0.2,
+     "tipo": "acro",
+     "regla": "2 mortales D distintos + 1 mortal C, O 1 mortal E + 1 mortal D"
+    },
+    {
+     "valor": 0.1,
+     "tipo": "acro",
+     "regla": "(si no alcanza 0.20) 2 mortales D distintos, O 1 E + 1 C"
+    },
+    {
+     "valor": 0.1,
+     "tipo": "danza",
+     "regla": "3 VP de danza C distintos, O 1 D de danza + 1 C o mayor"
+    }
+   ],
+   "composicion": "ver FX.composicion_9_10 con 'falta mortal D' -0.20"
+  },
+  "cv_9_10": {
+   "acro_indirecta": [
+    {
+     "valor": 0.1,
+     "regla": "A/B+A/B+C, B+C, A+D"
+    },
+    {
+     "valor": 0.2,
+     "regla": "C+C, A+E, B/C+D/E, A+A+D"
+    }
+   ],
+   "acro_directa": [
+    {
+     "valor": 0.1,
+     "regla": "B+B, A+C, A+A+C"
+    },
+    {
+     "valor": 0.2,
+     "regla": "B+C, C+C, A+A+D, A/B+D/E"
+    }
+   ],
+   "danza_o_mixto": [
+    {
+     "valor": 0.1,
+     "regla": "B+D, C+C, o mortal D/E + salto A o mayor"
+    },
+    {
+     "valor": 0.2,
+     "regla": "C+D/E"
+    }
+   ],
+   "nota": "No hay bono por salto+giro. Salto que sale de 2 pies y cae en 1 pie vale como conexion de danza (EYMAN). L9: D/E permitidos valen C.",
+   "fuente": "AP7; TXQRG; EYMAN"
+  },
+  "composicion_9_10": [
+   {
+    "ded": 0.1,
+    "texto": "mortales en una sola direccion (bwd vs fwd/swd; arabians cuentan adelante)"
+   },
+   {
+    "ded": 0.1,
+    "cada_tipo": true,
+    "texto": "mas de 2 elementos de danza de la misma forma (tuck/wolf o straddle)"
+   },
+   {
+    "ded": 0.2,
+    "texto": "falta giro en un pie min. B"
+   },
+   {
+    "ded": 0.2,
+    "texto": "L9: falta min. un mortal C en el ejercicio; L10: falta min. un mortal D"
+   }
+  ],
+  "fuente": "ERC FLOOR-1; AP7; AP8; TXQRG; EYMAN"
+ },
+ "sv_ejemplos_old_2022_26": "OLD GENERAL-24/25 trae ejemplos con la formula vieja (L10 base 9.50; L9 9.70; L6-8 10.0). NO usar sus bases; la mecanica de reemplazo/restringidos si sirve."
+}

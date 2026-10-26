@@ -1,0 +1,1071 @@
+{
+ "_meta": {
+  "fuente": "USAG Dev COP 2026-2030: Appendix 1 (L10), Appendix 2 (L9), Appendix 3 (L6/7/8); Event Rules Charts 6-10 p. VAULT-1",
+  "notas": [
+   "Numeracion de saltos propia USAG (grupos I-V), no la tabla FIG.",
+   "Si se ejecuta un salto que no esta en la tabla del nivel: salto VOID. L6/7/8/9: si cualquiera de los 2 saltos no esta permitido, el EVENTO completo es VOID (ERC VAULT-1).",
+   "Grupo 3: todos permiten 90°-180° de giro LA en el 1er vuelo. Grupo 5 descritos como flic-flac con 1/1: permiten 3/4 (270°) a 1/1 (360°) en el 1er vuelo.",
+   "L10: todo salto de 10.0 realizado sin caida ni spot recibe +0.10 de bono, EXCEPTO los marcados sin_bono_10 (2.302, 2.311, 3.407, 4.306, 4.309, 4.403, 4.407, 5.301, 5.408, 5.409).",
+   "Spot: L6/7 durante el salto VOID, al aterrizar -0.50, despues de aterrizar sin deduccion. L8: durante VOID salvo spot en 2o vuelo de salto con mortal -1.00. L9/10: durante VOID; al aterrizar -0.50.",
+   "Simbolo -> = flecha del original (1er vuelo -> 2o vuelo). FHS onto board = front handspring al trampolin (entrada a tabla con rondada/paloma al trampolin).",
+   "Cuantos saltos se hacen y cual cuenta (mejor vs promedio) no aparece en los documentos publicos 2026; se sabe que se registran 2 saltos (hoja AP13 con 'Vault 1/Vault 2' y 'segundo salto' tras caida) - verificar en el COP."
+  ]
+ },
+ "6": [
+  {
+   "n": "1.111",
+   "nombre_en": "Front handspring entry onto table, arrive on mat stack on the feet, straight body with tight upper-back arch; arms optional",
+   "valor": 10.0
+  },
+  {
+   "n": "3.116",
+   "nombre_en": "1/4-1/2 twist on (Tsukahara entry) onto table, arrive on mat stack on the feet (L6/7) or on the back (L7 only), straight-hollow body; arms optional",
+   "valor": 10.0,
+   "nota": "En L6 solo llegada de pie; de espalda solo L7"
+  },
+  {
+   "n": "4.111",
+   "nombre_en": "Round-off entry (Yurchenko) onto table, arrive on mat stack on the feet (L6/7) or on the back (L7 only), straight-hollow body; arms optional",
+   "valor": 10.0,
+   "nota": "En L6 solo llegada de pie; de espalda solo L7"
+  }
+ ],
+ "7": [
+  {
+   "n": "1.111",
+   "nombre_en": "Front handspring entry onto table, arrive on mat stack on the feet, straight body with tight upper-back arch; arms optional",
+   "valor": 10.0
+  },
+  {
+   "n": "3.116",
+   "nombre_en": "1/4-1/2 twist on (Tsukahara entry) onto table, arrive on mat stack on the feet (L6/7) or on the back (L7 only), straight-hollow body; arms optional",
+   "valor": 10.0
+  },
+  {
+   "n": "4.111",
+   "nombre_en": "Round-off entry (Yurchenko) onto table, arrive on mat stack on the feet (L6/7) or on the back (L7 only), straight-hollow body; arms optional",
+   "valor": 10.0
+  }
+ ],
+ "8": [
+  {
+   "n": "1.101",
+   "nombre_en": "Handspring",
+   "valor": 9.0
+  },
+  {
+   "n": "1.102",
+   "nombre_en": "Handspring -> 1/2 twist",
+   "valor": 9.1
+  },
+  {
+   "n": "1.103",
+   "nombre_en": "Yamashita",
+   "valor": 9.0
+  },
+  {
+   "n": "1.104",
+   "nombre_en": "Yamashita -> 1/2 twist",
+   "valor": 9.1
+  },
+  {
+   "n": "1.105",
+   "nombre_en": "1/2 twist -> 1/2 twist OR 1/4 twist -> 3/4 twist",
+   "valor": 9.2
+  },
+  {
+   "n": "1.106",
+   "nombre_en": "1/4-1/2 twist -> repulsion (with flight to feet)",
+   "valor": 9.0
+  },
+  {
+   "n": "1.108",
+   "nombre_en": "1/4 twist -> 1/4 twist (to face outward)",
+   "valor": 9.0
+  },
+  {
+   "n": "1.109",
+   "nombre_en": "FHS onto board -> repulsion (with flight to feet)",
+   "valor": 9.1
+  },
+  {
+   "n": "1.110",
+   "nombre_en": "FHS onto board -> handspring 1/2",
+   "valor": 9.2
+  },
+  {
+   "n": "1.111",
+   "nombre_en": "FHS onto board, 1/4-1/2 twist -> repulsion (with flight to feet)",
+   "valor": 9.1
+  },
+  {
+   "n": "1.201",
+   "nombre_en": "Handspring -> 1/1 twist",
+   "valor": 9.5
+  },
+  {
+   "n": "1.202",
+   "nombre_en": "Handspring -> 1 1/2 twist",
+   "valor": 9.7
+  },
+  {
+   "n": "1.203",
+   "nombre_en": "Yamashita -> 1/1 twist",
+   "valor": 9.5
+  },
+  {
+   "n": "1.205",
+   "nombre_en": "1/2 twist -> 1 1/2 twist OR 1/4 twist -> 1 3/4 twist",
+   "valor": 9.6
+  },
+  {
+   "n": "1.206",
+   "nombre_en": "1/2 twist -> 1/1 twist OR 1/4 twist -> 1 1/4 twist",
+   "valor": 9.4
+  },
+  {
+   "n": "1.207",
+   "nombre_en": "1/1 twist -> handspring/Yamashita",
+   "valor": 9.5
+  },
+  {
+   "n": "1.208",
+   "nombre_en": "1/1 twist -> 1/2 twist",
+   "valor": 9.7
+  },
+  {
+   "n": "1.209",
+   "nombre_en": "FHS onto board -> handspring 1/1",
+   "valor": 9.6
+  },
+  {
+   "n": "1.211",
+   "nombre_en": "FHS onto board, 1/2 twist -> 1/2 twist OR 1/4 twist -> 3/4 twist",
+   "valor": 9.3
+  },
+  {
+   "n": "1.301",
+   "nombre_en": "Handspring -> 2/1 twist",
+   "valor": 10.0
+  },
+  {
+   "n": "1.306",
+   "nombre_en": "1/2 twist -> 2/1 twist OR 1/4 twist -> 2 1/4 twist",
+   "valor": 10.0
+  },
+  {
+   "n": "1.311",
+   "nombre_en": "FHS onto board, 1/2 twist -> 1/1 twist OR 1/4 twist -> 1 1/4 twist",
+   "valor": 9.5
+  },
+  {
+   "n": "3.201",
+   "nombre_en": "Tsukahara tuck",
+   "valor": 10.0
+  },
+  {
+   "n": "3.303",
+   "nombre_en": "Tsukahara pike",
+   "valor": 10.0
+  },
+  {
+   "n": "4.101",
+   "nombre_en": "RO, FF -> repulsion (with flight to feet)",
+   "valor": 9.0
+  },
+  {
+   "n": "4.102",
+   "nombre_en": "RO, FF -> repulsion 1/2",
+   "valor": 9.1
+  },
+  {
+   "n": "4.201",
+   "nombre_en": "RO, FF -> 1/1 twist",
+   "valor": 9.4
+  },
+  {
+   "n": "4.202",
+   "nombre_en": "RO, FF -> 1 1/2 twist (Allen)",
+   "valor": 9.6
+  },
+  {
+   "n": "4.203",
+   "nombre_en": "RO, FF -> back tuck",
+   "valor": 10.0
+  },
+  {
+   "n": "4.304",
+   "nombre_en": "RO, FF -> back pike",
+   "valor": 10.0
+  },
+  {
+   "n": "5.101",
+   "nombre_en": "RO, FF 1/2 -> handspring",
+   "valor": 9.2
+  },
+  {
+   "n": "5.102",
+   "nombre_en": "RO, FF 1/2 -> handspring 1/2",
+   "valor": 9.4
+  },
+  {
+   "n": "5.201",
+   "nombre_en": "RO, FF 1/2 -> 1/1 twist",
+   "valor": 9.6
+  },
+  {
+   "n": "5.202",
+   "nombre_en": "RO, FF 1/2 -> 1 1/2 twist",
+   "valor": 9.8
+  },
+  {
+   "n": "5.312",
+   "nombre_en": "RO, FF 1/2 -> 2/1 twist",
+   "valor": 10.0
+  }
+ ],
+ "9": [
+  {
+   "n": "1.101",
+   "nombre_en": "Handspring",
+   "valor": 8.5
+  },
+  {
+   "n": "1.102",
+   "nombre_en": "Hsp -> 1/2",
+   "valor": 8.6
+  },
+  {
+   "n": "1.103",
+   "nombre_en": "Yamashita",
+   "valor": 8.5
+  },
+  {
+   "n": "1.104",
+   "nombre_en": "Yami -> 1/2",
+   "valor": 8.6
+  },
+  {
+   "n": "1.105",
+   "nombre_en": "1/2 -> 1/2 OR 1/4 -> 3/4",
+   "valor": 8.6
+  },
+  {
+   "n": "1.106",
+   "nombre_en": "1/4-1/2 -> repulsion",
+   "valor": 7.0
+  },
+  {
+   "n": "1.109",
+   "nombre_en": "FHS onto board -> repulsion",
+   "valor": 8.6
+  },
+  {
+   "n": "1.110",
+   "nombre_en": "FHS onto board -> Hsp 1/2",
+   "valor": 8.7
+  },
+  {
+   "n": "1.111",
+   "nombre_en": "FHS onto board, 1/4-1/2 -> repulsion",
+   "valor": 7.1
+  },
+  {
+   "n": "1.201",
+   "nombre_en": "Hsp -> 1/1",
+   "valor": 9.0
+  },
+  {
+   "n": "1.202",
+   "nombre_en": "Hsp -> 1 1/2",
+   "valor": 9.4
+  },
+  {
+   "n": "1.203",
+   "nombre_en": "Yami -> 1/1",
+   "valor": 9.0
+  },
+  {
+   "n": "1.205",
+   "nombre_en": "1/2 -> 1 1/2 OR 1/4 -> 1 3/4",
+   "valor": 9.3
+  },
+  {
+   "n": "1.206",
+   "nombre_en": "1/2 -> 1/1 OR 1/4 -> 1 1/4",
+   "valor": 8.9
+  },
+  {
+   "n": "1.207",
+   "nombre_en": "1/1 -> Hsp/Yami",
+   "valor": 9.0
+  },
+  {
+   "n": "1.208",
+   "nombre_en": "1/1 -> 1/2",
+   "valor": 9.3
+  },
+  {
+   "n": "1.209",
+   "nombre_en": "FHS onto board, Hsp -> 1/1",
+   "valor": 9.1
+  },
+  {
+   "n": "1.211",
+   "nombre_en": "FHS onto board, 1/2 -> 1/2 OR 1/4 -> 3/4",
+   "valor": 8.7
+  },
+  {
+   "n": "1.301",
+   "nombre_en": "Hsp -> 2/1",
+   "valor": 10.0
+  },
+  {
+   "n": "1.306",
+   "nombre_en": "1/2 -> 2/1 OR 1/4 -> 2 1/4",
+   "valor": 9.8
+  },
+  {
+   "n": "1.307",
+   "nombre_en": "1/1 -> 1/1",
+   "valor": 9.8
+  },
+  {
+   "n": "1.311",
+   "nombre_en": "FHS onto board, 1/2 -> 1/1 OR 1/4 -> 1 1/4",
+   "valor": 9.0
+  },
+  {
+   "n": "2.301",
+   "nombre_en": "Hsp -> front tuck",
+   "valor": 10.0
+  },
+  {
+   "n": "2.302",
+   "nombre_en": "Hsp -> front tuck 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "2.304",
+   "nombre_en": "Hsp -> front pike",
+   "valor": 10.0
+  },
+  {
+   "n": "2.310",
+   "nombre_en": "FHS onto board, Hsp -> front tuck",
+   "valor": 10.0
+  },
+  {
+   "n": "2.311",
+   "nombre_en": "FHS onto board, Hsp -> front pike",
+   "valor": 10.0
+  },
+  {
+   "n": "3.201",
+   "nombre_en": "Tsukahara tuck",
+   "valor": 9.6
+  },
+  {
+   "n": "3.301",
+   "nombre_en": "FHS onto board, 1/4 to 1/2 -> back tuck",
+   "valor": 9.7
+  },
+  {
+   "n": "3.302",
+   "nombre_en": "Tsuk tuck 1/1",
+   "valor": 10.0
+  },
+  {
+   "n": "3.303",
+   "nombre_en": "Tsuk pike",
+   "valor": 9.7
+  },
+  {
+   "n": "3.304",
+   "nombre_en": "Tsuk layout",
+   "valor": 10.0
+  },
+  {
+   "n": "3.305",
+   "nombre_en": "FHS onto board, 1/4 to 1/2 -> back pike",
+   "valor": 9.8
+  },
+  {
+   "n": "3.306",
+   "nombre_en": "1/2 -> 1/2, front tuck OR 1/4 -> 1/4, front tuck (land facing out) OR Tsuk tuck 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "3.308",
+   "nombre_en": "1/2 -> 1/2, front tuck 1/2 OR 1/4 -> 3/4, front tuck 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "4.101",
+   "nombre_en": "RO, FF -> repulsion",
+   "valor": 7.0
+  },
+  {
+   "n": "4.102",
+   "nombre_en": "RO, FF -> repulsion 1/2",
+   "valor": 7.7
+  },
+  {
+   "n": "4.201",
+   "nombre_en": "RO, FF -> 1/1 twist",
+   "valor": 9.1
+  },
+  {
+   "n": "4.202",
+   "nombre_en": "RO, FF -> 1 1/2 twist",
+   "valor": 9.3
+  },
+  {
+   "n": "4.203",
+   "nombre_en": "RO, FF -> back tuck",
+   "valor": 9.6
+  },
+  {
+   "n": "4.301",
+   "nombre_en": "RO, FF -> 2/1 twist",
+   "valor": 9.8
+  },
+  {
+   "n": "4.303",
+   "nombre_en": "RO, FF -> back tuck 1/1",
+   "valor": 10.0
+  },
+  {
+   "n": "4.304",
+   "nombre_en": "RO, FF -> back pike",
+   "valor": 9.7
+  },
+  {
+   "n": "4.305",
+   "nombre_en": "RO, FF -> back layout",
+   "valor": 10.0
+  },
+  {
+   "n": "4.307",
+   "nombre_en": "RO, FF -> 1/2 off, front tuck OR RO, FF -> back tuck 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "4.407",
+   "nombre_en": "RO, FF -> 1/2 turn, front tuck 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "5.101",
+   "nombre_en": "RO, FF 1/2 -> Hsp",
+   "valor": 8.9
+  },
+  {
+   "n": "5.102",
+   "nombre_en": "RO, FF 1/2 -> Hsp 1/2 off",
+   "valor": 9.1
+  },
+  {
+   "n": "5.107",
+   "nombre_en": "RO, FF 1/1 -> Hsp 1/2 off",
+   "valor": 9.2
+  },
+  {
+   "n": "5.108",
+   "nombre_en": "RO, FF 1/1 -> repulsion",
+   "valor": 8.2
+  },
+  {
+   "n": "5.201",
+   "nombre_en": "RO, FF 1/2 -> 1/1 twist",
+   "valor": 9.2
+  },
+  {
+   "n": "5.202",
+   "nombre_en": "RO, FF 1/2 -> 1 1/2 twist",
+   "valor": 9.4
+  },
+  {
+   "n": "5.207",
+   "nombre_en": "RO, FF 1/1 -> 1/1 twist",
+   "valor": 9.3
+  },
+  {
+   "n": "5.301",
+   "nombre_en": "RO, FF 1/2 -> front tuck",
+   "valor": 10.0
+  },
+  {
+   "n": "5.312",
+   "nombre_en": "RO, FF 1/2 -> 2/1 twist off",
+   "valor": 10.0
+  }
+ ],
+ "10": [
+  {
+   "n": "1.101",
+   "nombre_en": "Handspring",
+   "valor": 8.1
+  },
+  {
+   "n": "1.102",
+   "nombre_en": "Hsp -> 1/2",
+   "valor": 8.2
+  },
+  {
+   "n": "1.103",
+   "nombre_en": "Yamashita",
+   "valor": 8.1
+  },
+  {
+   "n": "1.104",
+   "nombre_en": "Yami -> 1/2",
+   "valor": 8.2
+  },
+  {
+   "n": "1.105",
+   "nombre_en": "1/2 -> 1/2 OR 1/4 -> 3/4",
+   "valor": 8.2
+  },
+  {
+   "n": "1.106",
+   "nombre_en": "1/4-1/2 -> repulsion",
+   "valor": 7.0
+  },
+  {
+   "n": "1.109",
+   "nombre_en": "FHS onto board -> repulsion",
+   "valor": 8.2
+  },
+  {
+   "n": "1.110",
+   "nombre_en": "FHS onto board -> Hsp 1/2",
+   "valor": 8.3
+  },
+  {
+   "n": "1.111",
+   "nombre_en": "FHS onto board, 1/4-1/2 -> repulsion",
+   "valor": 7.1
+  },
+  {
+   "n": "1.201",
+   "nombre_en": "Hsp -> 1/1",
+   "valor": 8.8
+  },
+  {
+   "n": "1.202",
+   "nombre_en": "Hsp -> 1 1/2",
+   "valor": 9.2
+  },
+  {
+   "n": "1.203",
+   "nombre_en": "Yami -> 1/1",
+   "valor": 8.8
+  },
+  {
+   "n": "1.205",
+   "nombre_en": "1/2 -> 1 1/2 OR 1/4 -> 1 3/4",
+   "valor": 9.1
+  },
+  {
+   "n": "1.206",
+   "nombre_en": "1/2 -> 1/1 OR 1/4 -> 1 1/4",
+   "valor": 8.7
+  },
+  {
+   "n": "1.207",
+   "nombre_en": "1/1 -> H/Y",
+   "valor": 8.9
+  },
+  {
+   "n": "1.208",
+   "nombre_en": "1/1 -> 1/2",
+   "valor": 9.1
+  },
+  {
+   "n": "1.209",
+   "nombre_en": "FHS onto board, Hsp -> 1/1",
+   "valor": 8.9
+  },
+  {
+   "n": "1.211",
+   "nombre_en": "FHS onto board, 1/2 -> 1/2 OR 1/4 -> 3/4",
+   "valor": 8.3
+  },
+  {
+   "n": "1.301",
+   "nombre_en": "Hsp -> 2/1",
+   "valor": 9.8
+  },
+  {
+   "n": "1.306",
+   "nombre_en": "1/2 -> 2/1 OR 1/4 -> 2 1/4",
+   "valor": 9.6
+  },
+  {
+   "n": "1.307",
+   "nombre_en": "1/1 -> 1/1",
+   "valor": 9.7
+  },
+  {
+   "n": "1.308",
+   "nombre_en": "1/1 -> 1 1/2",
+   "valor": 9.8
+  },
+  {
+   "n": "1.311",
+   "nombre_en": "FHS onto board, 1/2 -> 1/1 OR 1/4 -> 1 1/4",
+   "valor": 8.8
+  },
+  {
+   "n": "1.402",
+   "nombre_en": "Hsp -> 2 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "1.504",
+   "nombre_en": "Yami -> 2 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "2.301",
+   "nombre_en": "Hsp -> front tuck",
+   "valor": 9.8
+  },
+  {
+   "n": "2.302",
+   "nombre_en": "Hsp -> front tuck 1/2",
+   "valor": 10.0,
+   "sin_bono_10": true
+  },
+  {
+   "n": "2.303",
+   "nombre_en": "Hsp -> 1/2, back tuck (Cuervo tuck)",
+   "valor": 9.9
+  },
+  {
+   "n": "2.304",
+   "nombre_en": "Hsp -> front pike",
+   "valor": 9.9
+  },
+  {
+   "n": "2.310",
+   "nombre_en": "FHS onto board, Hsp -> front tuck",
+   "valor": 9.9
+  },
+  {
+   "n": "2.311",
+   "nombre_en": "FHS onto board, Hsp -> front pike",
+   "valor": 10.0,
+   "sin_bono_10": true
+  },
+  {
+   "n": "2.402",
+   "nombre_en": "Hsp -> front tuck 1/1",
+   "valor": 10.0
+  },
+  {
+   "n": "2.403",
+   "nombre_en": "Hsp -> 1/2, back tuck w/ 1/2 (Cuervo tuck w/ 1/2)",
+   "valor": 10.0
+  },
+  {
+   "n": "2.404",
+   "nombre_en": "Hsp -> front pike 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "2.405",
+   "nombre_en": "Hsp -> 1/2, back pike (Cuervo pike)",
+   "valor": 10.0
+  },
+  {
+   "n": "2.406",
+   "nombre_en": "Hsp -> front layout",
+   "valor": 10.0
+  },
+  {
+   "n": "2.407",
+   "nombre_en": "Hsp -> front layout 1/2 OR Hsp -> 1/2, back layout (Cuervo layout)",
+   "valor": 10.0
+  },
+  {
+   "n": "2.408",
+   "nombre_en": "Hsp -> front pike 1/1",
+   "valor": 10.0
+  },
+  {
+   "n": "2.409",
+   "nombre_en": "1/1 -> front tuck",
+   "valor": 10.0
+  },
+  {
+   "n": "2.410",
+   "nombre_en": "FHS onto board, Hsp -> front tuck 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "2.411",
+   "nombre_en": "FHS onto board, Hsp -> front pike 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "2.501",
+   "nombre_en": "Hsp -> double front tuck",
+   "valor": 10.0
+  },
+  {
+   "n": "2.502",
+   "nombre_en": "Hsp -> front tuck 1 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "2.507",
+   "nombre_en": "Hsp -> front layout 1/1",
+   "valor": 10.0
+  },
+  {
+   "n": "2.508",
+   "nombre_en": "Hsp -> front layout 1 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "2.509",
+   "nombre_en": "1/1 -> front pike",
+   "valor": 10.0
+  },
+  {
+   "n": "2.607",
+   "nombre_en": "Hsp -> front layout 2/1",
+   "valor": 10.0
+  },
+  {
+   "n": "2.609",
+   "nombre_en": "1/1 twist -> front layout",
+   "valor": 10.0
+  },
+  {
+   "n": "3.201",
+   "nombre_en": "Tsukahara tuck",
+   "valor": 9.4
+  },
+  {
+   "n": "3.301",
+   "nombre_en": "FHS onto board, 1/4 to 1/2 -> back tuck",
+   "valor": 9.5
+  },
+  {
+   "n": "3.302",
+   "nombre_en": "Tsuk tuck 1/1",
+   "valor": 9.8
+  },
+  {
+   "n": "3.303",
+   "nombre_en": "Tsuk pike",
+   "valor": 9.5
+  },
+  {
+   "n": "3.304",
+   "nombre_en": "Tsuk layout",
+   "valor": 9.7
+  },
+  {
+   "n": "3.305",
+   "nombre_en": "FHS onto board, 1/4 to 1/2 -> back pike",
+   "valor": 9.6
+  },
+  {
+   "n": "3.306",
+   "nombre_en": "1/2 -> 1/2, front tuck OR 1/4 -> 1/4, front tuck (land facing out) OR Tsuk tuck 1/2",
+   "valor": 9.7
+  },
+  {
+   "n": "3.307",
+   "nombre_en": "1/2 -> 1/2, front pike OR 1/4 -> 3/4, front pike (land facing out) OR Tsuk pike 1/2",
+   "valor": 9.8
+  },
+  {
+   "n": "3.308",
+   "nombre_en": "1/2 -> 1/2, front tuck 1/2 OR 1/4 -> 3/4, front tuck 1/2",
+   "valor": 9.8
+  },
+  {
+   "n": "3.402",
+   "nombre_en": "Tsuk tuck 1 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "3.403",
+   "nombre_en": "Tsuk pike 1/1",
+   "valor": 9.9
+  },
+  {
+   "n": "3.404",
+   "nombre_en": "Tsuk layout 1/1",
+   "valor": 10.0
+  },
+  {
+   "n": "3.405",
+   "nombre_en": "FHS onto board, 1/4 to 1/2 -> back tuck 1/1",
+   "valor": 9.9
+  },
+  {
+   "n": "3.407",
+   "nombre_en": "1/2 -> 1/2, front layout OR 1/4 -> 3/4, front layout (land facing out) OR Tsuk layout 1/2",
+   "valor": 10.0,
+   "sin_bono_10": true
+  },
+  {
+   "n": "3.504",
+   "nombre_en": "Tsuk layout 1 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "3.505",
+   "nombre_en": "Tsuk layout 2/1",
+   "valor": 10.0
+  },
+  {
+   "n": "3.507",
+   "nombre_en": "1/2 -> 1/2, front layout 1/2 OR 1/4 -> 3/4, front layout 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "3.508",
+   "nombre_en": "1/4 -> 1/4, front tuck 1 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "3.509",
+   "nombre_en": "1/2 -> 1/2, front tuck 1/1 OR 1/4 -> 3/4, front tuck 1/1",
+   "valor": 10.0
+  },
+  {
+   "n": "3.605",
+   "nombre_en": "Tsuk layout 2 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "4.101",
+   "nombre_en": "RO, FF -> repulsion",
+   "valor": 7.0
+  },
+  {
+   "n": "4.102",
+   "nombre_en": "RO, FF -> repulsion 1/2",
+   "valor": 7.7
+  },
+  {
+   "n": "4.201",
+   "nombre_en": "RO, FF -> 1/1",
+   "valor": 8.9
+  },
+  {
+   "n": "4.202",
+   "nombre_en": "RO, FF -> 1 1/2",
+   "valor": 9.1
+  },
+  {
+   "n": "4.203",
+   "nombre_en": "RO, FF -> back tuck",
+   "valor": 9.4
+  },
+  {
+   "n": "4.301",
+   "nombre_en": "RO, FF -> 2/1 twist",
+   "valor": 9.7
+  },
+  {
+   "n": "4.303",
+   "nombre_en": "RO, FF -> back tuck 1/1",
+   "valor": 9.8
+  },
+  {
+   "n": "4.304",
+   "nombre_en": "RO, FF -> back pike",
+   "valor": 9.5
+  },
+  {
+   "n": "4.305",
+   "nombre_en": "RO, FF -> back layout",
+   "valor": 9.7
+  },
+  {
+   "n": "4.306",
+   "nombre_en": "RO, FF -> back layout 1/1",
+   "valor": 10.0,
+   "sin_bono_10": true
+  },
+  {
+   "n": "4.307",
+   "nombre_en": "RO, FF -> 1/2, front tuck OR RO, FF -> back tuck 1/2",
+   "valor": 9.8
+  },
+  {
+   "n": "4.308",
+   "nombre_en": "RO, FF -> 1/2, front pike OR RO, FF -> back pike 1/2",
+   "valor": 9.9
+  },
+  {
+   "n": "4.309",
+   "nombre_en": "RO, FF -> 1/2, front layout OR RO, FF -> back layout 1/2",
+   "valor": 10.0,
+   "sin_bono_10": true
+  },
+  {
+   "n": "4.403",
+   "nombre_en": "RO, FF -> back tuck 1 1/2",
+   "valor": 10.0,
+   "sin_bono_10": true
+  },
+  {
+   "n": "4.406",
+   "nombre_en": "RO, FF -> back layout w/ 1 1/2 twist",
+   "valor": 10.0
+  },
+  {
+   "n": "4.407",
+   "nombre_en": "RO, FF -> 1/2, front tuck 1/2",
+   "valor": 10.0,
+   "sin_bono_10": true
+  },
+  {
+   "n": "4.503",
+   "nombre_en": "RO, FF -> back tuck w/ 2/1 twist",
+   "valor": 10.0
+  },
+  {
+   "n": "4.506",
+   "nombre_en": "RO, FF -> back layout w/ 2/1 twist",
+   "valor": 10.0
+  },
+  {
+   "n": "4.508",
+   "nombre_en": "RO, FF -> 1/2, front pike 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "4.606",
+   "nombre_en": "RO, FF -> back layout w/ 2 1/2 twist",
+   "valor": 10.0
+  },
+  {
+   "n": "5.101",
+   "nombre_en": "RO, FF 1/2 -> Hsp off",
+   "valor": 8.9
+  },
+  {
+   "n": "5.102",
+   "nombre_en": "RO, FF 1/2 -> Hsp 1/2 off",
+   "valor": 9.1
+  },
+  {
+   "n": "5.107",
+   "nombre_en": "RO, FF 1/1 -> Hsp 1/2 off",
+   "valor": 9.2
+  },
+  {
+   "n": "5.108",
+   "nombre_en": "RO, FF 1/1 -> repulsion",
+   "valor": 8.2
+  },
+  {
+   "n": "5.201",
+   "nombre_en": "RO, FF 1/2 -> 1/1 twist",
+   "valor": 9.2
+  },
+  {
+   "n": "5.202",
+   "nombre_en": "RO, FF 1/2 -> 1 1/2 twist",
+   "valor": 9.4
+  },
+  {
+   "n": "5.207",
+   "nombre_en": "RO, FF 1/1 -> 1/1 twist",
+   "valor": 9.3
+  },
+  {
+   "n": "5.301",
+   "nombre_en": "RO, FF 1/2 -> front tuck",
+   "valor": 10.0,
+   "sin_bono_10": true
+  },
+  {
+   "n": "5.312",
+   "nombre_en": "RO, FF 1/2 -> 2/1 twist",
+   "valor": 9.9
+  },
+  {
+   "n": "5.401",
+   "nombre_en": "RO, FF 1/2 -> front tuck 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "5.402",
+   "nombre_en": "RO, FF 1/2 -> 1/2, back tuck",
+   "valor": 10.0
+  },
+  {
+   "n": "5.403",
+   "nombre_en": "RO, FF 1/2 -> front pike",
+   "valor": 10.0
+  },
+  {
+   "n": "5.404",
+   "nombre_en": "RO, FF 1/2 -> front pike 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "5.405",
+   "nombre_en": "RO, FF 1/2 -> 1/2, back pike",
+   "valor": 10.0
+  },
+  {
+   "n": "5.406",
+   "nombre_en": "RO, FF 1/2 -> front layout",
+   "valor": 10.0
+  },
+  {
+   "n": "5.408",
+   "nombre_en": "RO, FF 1/1 -> back tuck",
+   "valor": 10.0,
+   "sin_bono_10": true
+  },
+  {
+   "n": "5.409",
+   "nombre_en": "RO, FF 1/1 -> back pike",
+   "valor": 10.0,
+   "sin_bono_10": true
+  },
+  {
+   "n": "5.410",
+   "nombre_en": "RO, FF 1/1 -> 1/2, front tuck",
+   "valor": 10.0
+  },
+  {
+   "n": "5.501",
+   "nombre_en": "RO, FF 1/2 -> front tuck 1 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "5.505",
+   "nombre_en": "RO, FF 1/2 -> 1/2, back layout OR RO, FF 1/2 -> front layout 1/2",
+   "valor": 10.0
+  },
+  {
+   "n": "5.509",
+   "nombre_en": "RO, FF 1/1 -> back layout",
+   "valor": 10.0
+  },
+  {
+   "n": "5.510",
+   "nombre_en": "RO, FF 1/1 -> back tuck 1/1",
+   "valor": 10.0
+  },
+  {
+   "n": "5.511",
+   "nombre_en": "RO, FF 1/1 -> back layout 1/1",
+   "valor": 10.0
+  }
+ ]
+}

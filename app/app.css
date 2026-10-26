@@ -1,0 +1,95 @@
+/* Pantalla de acceso y panel de administración (mismos colores que el editor). */
+[hidden]{display:none!important}
+.gate{display:block;max-width:420px;margin:0 auto;padding:12vh 16px 40px}
+.gate h1{font-size:22px;margin:0 0 4px;letter-spacing:.02em}
+.gate p{color:var(--muted);margin:0 0 18px;line-height:1.45}
+.gate form,.box{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px;display:grid;gap:12px}
+.gate label,.box label{display:grid;gap:5px;color:var(--muted);font-size:14px}
+.gate input,.box input,.box select{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:10px;padding:10px 11px;width:100%}
+#codigo{font-size:20px;letter-spacing:.12em;text-transform:uppercase;text-align:center}
+.msg{min-height:1.2em;font-size:14px;color:var(--muted)}
+.msg.bad{color:var(--bad)}.msg.ok{color:var(--ok)}
+.btn.full{width:100%;padding:12px;font-size:16px}
+.btn.danger{background:rgba(255,107,107,.14);border-color:rgba(255,107,107,.5)}
+.lic-pie{margin-top:26px;text-align:center;color:var(--muted);font-size:12px}
+.lic-pie button{background:none;border:0;color:var(--muted);text-decoration:underline;font-size:12px;padding:0}
+
+/* Panel de administración */
+.adm{max-width:980px;margin:0 auto;padding:14px 16px 60px}
+.adm h2{font-size:16px;margin:22px 0 8px}
+.adm .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;align-items:end}
+.lics{display:grid;gap:8px}
+.lic{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;gap:8px}
+.lic .fila{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.lic b{font-size:16px}
+.lic code{font-size:15px;letter-spacing:.08em;color:#9fd2ff}
+.lic small{color:var(--muted)}
+.lic .acc{display:flex;flex-wrap:wrap;gap:6px}
+.lic .acc .btn{padding:6px 10px;font-size:13px}
+.est{font-size:11px;padding:2px 8px;border-radius:20px;border:1px solid var(--line)}
+.est.activa{color:var(--ok);border-color:rgba(0,224,184,.4)}
+.est.cancelada{color:var(--bad);border-color:rgba(255,107,107,.4)}
+.est.vencida{color:var(--warn);border-color:rgba(255,179,71,.4)}
+.nuevo{border:1px solid rgba(0,224,184,.5);background:rgba(0,224,184,.08);border-radius:14px;padding:12px}
+.nuevo code{font-size:24px;letter-spacing:.14em}
+.filtro{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.filtro input,.lic input[type=date]{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:10px;padding:9px 10px;color:var(--txt);color-scheme:dark}
+.filtro input{width:100%;max-width:320px}
+.lic select{color-scheme:dark}
+@media print{#gate{display:none!important}}
+.tabs{display:flex;gap:6px;margin:14px 0 4px}
+.tabs button{background:none;border:1px solid var(--line);border-radius:10px;padding:7px 12px;color:var(--muted)}
+.tabs button.on{border-color:var(--acc);color:var(--txt);background:rgba(21,151,255,.16)}
+.resumen{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:10px 0}
+.resumen div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:10px}
+.resumen b{display:block;font-size:22px;color:var(--ok)}
+.resumen small{color:var(--muted)}
+.accs{display:grid;gap:4px}
+.acc-f{display:grid;grid-template-columns:120px 1fr;gap:2px 10px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:13px}
+.acc-f small{color:var(--muted)}
+.acc-f .rech{color:var(--bad)}
+
+/* ---------- Imagen de la app: azul FMG / USA Gymnastics, rojo y amarillo FIG GAM ---------- */
+:root{--bg1:#051730;--bg2:#0a2a55;--bg3:#0d3b78;--panel:rgba(3,14,34,.78);--line:rgba(255,255,255,.14);
+  --acc:#2f8fff;--rojo:#e3262f;--oro:#f5c23c;--txt:#f4f7fb;--muted:#a9bcd3}
+body{background:radial-gradient(1200px 600px at 85% -10%,rgba(47,143,255,.35),transparent 60%),linear-gradient(165deg,var(--bg1),var(--bg2) 55%,var(--bg3))}
+.hero{position:relative;margin:-14px -12px 16px;padding:22px 16px 18px;background:linear-gradient(135deg,#0070c0,#0a3f86 70%);border-bottom:6px solid var(--rojo);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:6px;background:#fff;opacity:.9;width:55%}
+.hero .sync{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.25)}
+.marca{display:flex;align-items:baseline;gap:8px;font-weight:800;letter-spacing:.06em;font-style:italic}
+.marca .m1{font-size:30px;color:#fff}
+.marca .m2{font-size:22px;color:var(--oro)}
+.lema{margin:4px 0 14px;color:#d6e6fb;font-size:14px}
+.logos{display:flex;gap:10px;align-items:center}
+.logos img{height:56px;width:auto;background:#fff;border-radius:12px;padding:5px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.home{display:grid;gap:12px}
+.tile{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--acc);border-radius:18px;padding:16px;color:var(--txt);text-decoration:none}
+button.tile:hover{border-color:var(--acc);transform:translateY(-1px)}
+.tile .tx{flex:1;display:grid;gap:4px}
+.tile b{font-size:18px}
+.tile small{color:var(--muted);line-height:1.35}
+.tile .aa{font-size:26px;color:var(--acc)}
+.tile .ico{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:24px;font-weight:700;background:rgba(47,143,255,.18);color:#cfe4ff}
+.t-obl{border-left-color:var(--rojo)}.t-obl .ico{background:rgba(227,38,47,.18);color:#ffd0d3}
+.t-doc{border-left-color:var(--oro)}
+.t-doc img{flex:none;width:46px;height:46px;object-fit:contain;background:#fff;border-radius:12px;padding:4px}
+.docbtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.dbtn{background:var(--oro);color:#1d1600;font-weight:700;border-radius:10px;padding:7px 14px;text-decoration:none;font-size:14px}
+.dbtn:hover{filter:brightness(1.08)}
+.dbtn2{background:none;color:var(--oro);border:1px solid var(--oro)}
+.home-pie{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px}
+.home-pie small{flex-basis:100%;color:var(--muted)}
+.gate h1{font-style:italic;font-weight:800;letter-spacing:.05em}
+.gate .logos{margin:0 0 18px}
+/* Ventana de sugerencias */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:grid;place-items:center;padding:16px;z-index:50}
+.modal .box{width:100%;max-width:460px}
+.modal textarea{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:10px;padding:10px;width:100%;min-height:140px;color:var(--txt);font:inherit;resize:vertical}
+.modal h2{margin:0;font-size:18px}
+.sugs{display:grid;gap:8px}
+.sug{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--oro);border-radius:12px;padding:10px 12px;display:grid;gap:6px}
+.sug.atendida{border-left-color:var(--line);opacity:.7}
+.sug p{margin:0;white-space:pre-wrap;line-height:1.4}
+.sug small{color:var(--muted)}
+.tabs .n{background:var(--rojo);color:#fff;border-radius:10px;padding:0 6px;margin-left:4px;font-size:12px}
+@media print{.hero,.home,.home-pie,.modal{display:none!important}}

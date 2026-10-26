@@ -1,9 +1,8 @@
-/* Jueceo femenil (pruebas; los ajustes que funcionen se pasan a APPBKA modulos/femenil/rutinas) – Editor de rutinas con cálculo de nota de partida.
+/* Jueceo GAF MEX – editor de rutinas femenil para jueces (nota de partida / nota D).
    Niveles USAG N6-N10 (Development Program 2026-2030) y Junior FIG / FIG (Código FIG GAF 2025-2028).
-   Datos en datos/: elementos_fig_wag.json (FIG), usag_elementos.json + usag_saltos.json + usag_reglas.json (USAG). */
-// Jueceo femenil: app de prueba independiente de BKA. Sin nube ni contraseñas: las rutinas se guardan solo en este equipo.
-const FB_CONFIG=null;
-const COLLECTION=null, DOC=null, LOCAL='jueceofem_rutinas';
+   Viene de APPBKA modulos/femenil/rutinas/editor.js. Aquí: sin nube ni usuarios; las rutinas se guardan solo en el equipo
+   del juez (localStorage). Los catálogos los carga app.js y llama a iniciarEditor(datos). */
+const LOCAL='jueceofem_rutinas';
 const APS=[['SALTO','Salto'],['BARRAS','Barras'],['VIGA','Viga'],['PISO','Piso']];
 const EV={BARRAS:'UB',VIGA:'BB',PISO:'FX'};
 const NIVELES=['N6','N7','N8','N9','N10','JR','FIG'];
@@ -14,8 +13,8 @@ const LETRAS='ABCDEFGHIJ';
 
 let FIG={}, FIGG={}, JUNIOR={}, US={}, USV={}, USR={};
 let S={atletas:{},orden:[]};
-let ui={view:'list',atleta:null,ap:'BARRAS',open:-1,q:'',del:-1,delA:null};
-let cloud=null, saveTimer=null, syncState=['','Cargando…'], SAVING=false;
+let ui={view:'menu',atleta:null,ap:'BARRAS',open:-1,q:'',del:-1,delA:null};
+let syncState=['ok','Guardado en este equipo'];
 const root=document.getElementById('ed');
 
 /* ---------- utilidades ---------- */
@@ -325,16 +324,32 @@ function totals(n){const a=S.atletas[n],t={aa:0};for(const[ap]of APS){t[ap]=comp
 
 /* ---------- guardado ---------- */
 function setSync(c,t){syncState=[c,t];const el=document.querySelector('.sync');if(el){el.className='sync '+c;el.textContent=t;}}
-function save(){try{localStorage.setItem(LOCAL,JSON.stringify(S));}catch(e){}
-  if(!cloud){setSync('ok','Guardado en este equipo');return;}
-  clearTimeout(saveTimer);setSync('','Guardando…');
-  saveTimer=setTimeout(async()=>{SAVING=true;try{await cloud.set(JSON.parse(JSON.stringify(S)));setSync('ok','Guardado en la nube');}
-    catch(e){console.error(e);setSync('warn','No se pudo guardar en la nube');}SAVING=false;},600);}
+function save(){try{localStorage.setItem(LOCAL,JSON.stringify(S));setSync('ok','Guardado en este equipo');}
+  catch(e){setSync('warn','No se pudo guardar en este equipo');}}
 
 /* ---------- vistas ---------- */
-function render(){ui.view==='list'?renderList():renderAthlete();}
+function render(){ui.view==='menu'?renderMenu():ui.view==='list'?renderList():renderAthlete();}
+// Inicio: crear rutinas, documentos oficiales (enlaces en config.js, JUECEO.docs), imprimir o descargar y sugerencias.
+function renderMenu(){
+  const D=(window.JUECEO&&window.JUECEO.docs)||{}, lnk=(u,t,c)=>u?`<a class="${c}" href="${esc(u)}" target="_blank" rel="noopener">${t}</a>`:'';
+  const sug=!!(window.JUECEO&&window.JUECEO.api&&!/PENDIENTE/.test(window.JUECEO.api));
+  root.innerHTML=`<header class="hero"><div class="hero-in">
+    <div class="marca"><span class="m1">JUECEO</span><span class="m2">GAF MEX</span></div>
+    <p class="lema">Herramienta para jueces de Gimnasia Artística Femenil</p>
+    <div class="logos"><img src="img/fig.png" alt="FIG"><img src="img/fmg.png" alt="Federación Mexicana de Gimnasia"><img src="img/usag.png" alt="USA Gymnastics"></div>
+  </div><span class="sync ${syncState[0]}">${esc(syncState[1])}</span></header>
+  <div class="home">
+    <button class="tile t-libre" data-act="libres"><span class="ico">＋</span><span class="tx"><b>Crear rutina libre</b><small>Niveles 6, 7, 8, 9, 10 (USAG), Junior FIG y FIG · nota de partida y nota D</small></span><span class="aa">›</span></button>
+    <div class="tile t-doc"><img src="img/fig.png" alt=""><span class="tx"><b>Código FIG vigente</b><small>Código de Puntuación GAF 2025–2028</small>
+      <span class="docbtns">${lnk(D.figES,'Español','dbtn')}${lnk(D.figEN,'English','dbtn')}${lnk(D.figNL,'Boletines FIG','dbtn dbtn2')}</span></span></div>
+    <div class="tile t-doc"><img src="img/usag.png" alt=""><span class="tx"><b>Programa USAG vigente</b><small>Women's Development Program · Rules &amp; Policies y Código 2026–2030</small>
+      <span class="docbtns">${lnk(D.usag,'Abrir','dbtn')}</span></span></div>
+  </div>
+  <div class="home-pie"><button class="btn" data-act="printall">Imprimir o guardar en PDF</button><button class="btn" data-act="export">Descargar en Excel</button>${sug?'<button class="btn ghost" data-act="sugerir">✉ Enviar sugerencia</button>':''}
+    <small>Tus rutinas se guardan en este equipo. Imprímelas o descárgalas cuando las necesites (una hoja por atleta; en el diálogo de impresión elige "Guardar como PDF").</small></div>`;
+}
 function renderList(){
-  let h=`<div class="top"><h1>Rutinas femenil</h1><span class="sync ${syncState[0]}">${esc(syncState[1])}</span></div>`;
+  let h=`<div class="top"><button class="back" data-act="menu">← Inicio</button><h1>Rutinas libres</h1><span class="sync ${syncState[0]}">${esc(syncState[1])}</span></div>`;
   h+=`<div class="cards">`;
   for(const n of S.orden){const a=S.atletas[n];if(!a)continue;const t=totals(n);
     h+=`<button class="card" data-act="open" data-v="${esc(n)}"><div><b>${esc(n)}</b><span class="lv">${esc(nivTxt(a.nivel))}</span></div><span class="aa">${esUSAG(a.nivel)?f2(t.aa):f2(t.aa)}</span></button>`;}
@@ -431,7 +446,7 @@ function renderSug(q){
 /* ---------- impresión ---------- */
 function printHTML(n){
   const a=S.atletas[n],t=totals(n),usag=esUSAG(a.nivel);
-  let h=`<div class="fs"><div class="ph"><img src="cliente/logo.png" alt=""><div><h1>${esc(n)}</h1><p>${esc(nivTxt(a.nivel))} · ${usag?'USAG Development 2026-2030':'Código FIG GAF 2025-2028'}</p></div><div class="paa"><span>${usag?'Notas de partida':'Notas D'} (suma)</span><b>${f2(t.aa)}</b></div></div><div class="grid2">`;
+  let h=`<div class="fs"><div class="ph"><div><h1>${esc(n)}</h1><p>${esc(nivTxt(a.nivel))} · ${usag?'USAG Development 2026-2030':'Código FIG GAF 2025-2028'}</p></div><div class="paa"><span>${usag?'Notas de partida':'Notas D'} (suma)</span><b>${f2(t.aa)}</b></div></div><div class="grid2">`;
   for(const[ap,lab]of APS){const res=t[ap],rows=a.r[ap]||[];
     h+=`<div class="pap"><div class="pap-h"><h2>${lab}</h2><b>${f2(res.np)}</b></div>`;
     if(ap==='SALTO')h+=`<div class="pm">${(res.vaults||[]).map((v,i)=>`Salto ${i+1}: ${f2(v.v)}`).join(' · ')}${res.avg!=null?` · Promedio ${f2(res.avg)}`:''}</div>`;
@@ -447,7 +462,20 @@ function printHTML(n){
   return h+'</div></div>';
 }
 function printAthlete(n){let pa=document.getElementById('printArea');if(!pa){pa=document.createElement('div');pa.id='printArea';document.body.appendChild(pa);}
-  pa.innerHTML=printHTML(n);setTimeout(()=>window.print(),50);}
+  pa.innerHTML=(Array.isArray(n)?n:[n]).map(printHTML).join('');setTimeout(()=>window.print(),50);}
+// Excel: hoja "Notas" (una fila por atleta) y hoja "Rutinas" (una fila por elemento).
+function exportExcel(){
+  if(!window.XLSX){alert('No se pudo cargar el generador de Excel. Revisa tu internet.');return;}
+  const notas=[['Atleta','Nivel',...APS.map(([,l])=>l),'Total']],rut=[['Atleta','Nivel','Aparato','#','Elemento','Código','Valor','Cuenta','Conexión','Caída']];
+  for(const n of S.orden){const a=S.atletas[n];if(!a)continue;const t=totals(n);
+    notas.push([n,nivTxt(a.nivel),...APS.map(([ap])=>+f2(t[ap].np)),+f2(t.aa)]);
+    for(const[ap,lab]of APS){const res=t[ap];(a.r[ap]||[]).forEach((r,i)=>{const e=el(r.k),l=letterOf(r);
+      let v=l||'';if(ap==='SALTO'){const x=res.vaults?.find(y=>y.i===i);v=x?+f2(x.v):'';}
+      const cv=r.c?(r.cvm!=null&&r.cvm!==''?+r.cvm:(res.pot?.[i]||0)):'';
+      rut.push([n,nivTxt(a.nivel),lab,i+1,r.n,e&&e.n?(e.sys==='U'||e.sys==='V'?'USAG ':'')+e.n:'',v,res.counted.has(i)?'Sí':'No',r.c?('+'+f1(cv)):'',r.caida?'Sí':'']);});}}
+  const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(notas),'Notas');XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(rut),'Rutinas');
+  XLSX.writeFile(wb,'Rutinas GAF.xlsx');
+}
 
 /* ---------- eventos ---------- */
 function A(){return S.atletas[ui.atleta];}
@@ -461,7 +489,11 @@ root.addEventListener('click',e=>{
   const b=e.target.closest('[data-act]');if(!b)return;const act=b.dataset.act,i=+b.dataset.i;
   if(b.tagName==='A')e.preventDefault();
   if(act==='open'){ui.atleta=b.dataset.v;ui.view='athlete';ui.ap='BARRAS';ui.open=-1;ui.q='';ui.del=-1;ui.delA=null;return render();}
-  if(act==='list'){ui.view='list';ui.delA=null;return render();}
+  if(act==='list'||act==='libres'){ui.view='list';ui.delA=null;return render();}
+  if(act==='menu'){ui.view='menu';return render();}
+  if(act==='printall'){if(!S.orden.length){alert('Todavía no hay atletas.');return;}return printAthlete(S.orden.filter(n=>S.atletas[n]));}
+  if(act==='export')return exportExcel();
+  if(act==='sugerir')return window.abrirSugerencia&&window.abrirSugerencia();
   if(act==='addA'){const n=(document.getElementById('nn').value||'').trim().replace(/\s+/g,' ');const l=document.getElementById('nl').value;
     if(!n)return;if(S.atletas[n]){alert('Ya existe una atleta con ese nombre.');return;}
     S.atletas[n]={nivel:l,r:{SALTO:[],BARRAS:[],VIGA:[],PISO:[]},cr:{},sr:{},cc:{},p:{}};S.orden.push(n);save();ui.atleta=n;ui.view='athlete';ui.ap='BARRAS';return render();}
@@ -502,25 +534,12 @@ root.addEventListener('keydown',e=>{
 });
 
 /* ---------- inicio ---------- */
-async function init(){
-  try{
-    const get=f=>fetch('datos/'+f,{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error(f);return r.json();});
-    const [fig,us,usv,usr]=await Promise.all([get('elementos_fig_wag.json'),get('usag_elementos.json'),get('usag_saltos.json'),get('usag_reglas.json')]);
-    FIG=fig.E;FIGG=fig.grupos;JUNIOR=fig.junior||{};US={BARRAS:us.BARRAS,VIGA:us.VIGA,PISO:us.PISO};USV=usv;USR=usr;
-  }catch(err){root.innerHTML=`<div class="top"></div><div class="empty">No se pudieron cargar los códigos: ${esc(err.message)}</div>`;return;}
-  let stored=null;
-  try{if(window.firebase){if(!firebase.apps.length)firebase.initializeApp(FB_CONFIG);cloud=firebase.firestore().collection(COLLECTION).doc(DOC);
-    const snap=await cloud.get();if(snap.exists)stored=snap.data();setSync('ok','Guardado en la nube');}}
-  catch(e){console.error(e);cloud=null;setSync('warn','Sin nube: guardado en este dispositivo');}
-  if(!cloud)setSync('ok','Guardado en este equipo');
-  if(!stored){try{stored=JSON.parse(localStorage.getItem(LOCAL)||'null');}catch(e){}}
+// La llama app.js con los catálogos ya cargados.
+function iniciarEditor(d){
+  FIG=d.fig.E;FIGG=d.fig.grupos;JUNIOR=d.fig.junior||{};US={BARRAS:d.us.BARRAS,VIGA:d.us.VIGA,PISO:d.us.PISO};USV=d.usv;USR=d.usr;
+  let stored=null;try{stored=JSON.parse(localStorage.getItem(LOCAL)||'null');}catch(e){}
   S={atletas:stored?.atletas||{},orden:stored?.orden||[]};
   for(const n of Object.keys(S.atletas)){const a=S.atletas[n];a.r=a.r||{};for(const[ap]of APS)a.r[ap]=a.r[ap]||[];a.cr=a.cr||{};a.sr=a.sr||{};a.cc=a.cc||{};a.p=a.p||{};if(!S.orden.includes(n))S.orden.push(n);}
   S.orden=S.orden.filter(n=>S.atletas[n]);
-  if(cloud)cloud.onSnapshot(s=>{if(!s.exists||s.metadata.hasPendingWrites||SAVING)return;const d=s.data();
-    if(document.activeElement&&document.activeElement.id==='q')return;
-    S={atletas:d.atletas||{},orden:d.orden||[]};for(const n of Object.keys(S.atletas)){const a=S.atletas[n];a.r=a.r||{};for(const[ap]of APS)a.r[ap]=a.r[ap]||[];a.cr=a.cr||{};a.sr=a.sr||{};a.cc=a.cc||{};a.p=a.p||{};}
-    render();});
   render();
 }
-init();

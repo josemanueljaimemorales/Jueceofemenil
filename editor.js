@@ -1,8 +1,9 @@
-/* BKA Femenil – Editor de rutinas con cálculo de nota de partida.
+/* Jueceo femenil (pruebas; los ajustes que funcionen se pasan a APPBKA modulos/femenil/rutinas) – Editor de rutinas con cálculo de nota de partida.
    Niveles USAG N6-N10 (Development Program 2026-2030) y Junior FIG / FIG (Código FIG GAF 2025-2028).
    Datos en datos/: elementos_fig_wag.json (FIG), usag_elementos.json + usag_saltos.json + usag_reglas.json (USAG). */
-const FB_CONFIG={apiKey:"AIzaSyA3Zni5o3VV_Q3zIdWSnhi9a0uQNNtZa_E",authDomain:"bkaapp-f61f4.firebaseapp.com",projectId:"bkaapp-f61f4",storageBucket:"bkaapp-f61f4.firebasestorage.app",messagingSenderId:"336720035886",appId:"1:336720035886:web:36fc6827c40ee030655fbf"};
-const COLLECTION='rutinasFemBKA', DOC='estado', LOCAL='rutinasFemBKA_estado';
+// Jueceo femenil: app de prueba independiente de BKA. Sin nube ni contraseñas: las rutinas se guardan solo en este equipo.
+const FB_CONFIG=null;
+const COLLECTION=null, DOC=null, LOCAL='jueceofem_rutinas';
 const APS=[['SALTO','Salto'],['BARRAS','Barras'],['VIGA','Viga'],['PISO','Piso']];
 const EV={BARRAS:'UB',VIGA:'BB',PISO:'FX'};
 const NIVELES=['N6','N7','N8','N9','N10','JR','FIG'];
@@ -325,7 +326,7 @@ function totals(n){const a=S.atletas[n],t={aa:0};for(const[ap]of APS){t[ap]=comp
 /* ---------- guardado ---------- */
 function setSync(c,t){syncState=[c,t];const el=document.querySelector('.sync');if(el){el.className='sync '+c;el.textContent=t;}}
 function save(){try{localStorage.setItem(LOCAL,JSON.stringify(S));}catch(e){}
-  if(!cloud){setSync('warn','Sin nube: guardado en este dispositivo');return;}
+  if(!cloud){setSync('ok','Guardado en este equipo');return;}
   clearTimeout(saveTimer);setSync('','Guardando…');
   saveTimer=setTimeout(async()=>{SAVING=true;try{await cloud.set(JSON.parse(JSON.stringify(S)));setSync('ok','Guardado en la nube');}
     catch(e){console.error(e);setSync('warn','No se pudo guardar en la nube');}SAVING=false;},600);}
@@ -333,7 +334,7 @@ function save(){try{localStorage.setItem(LOCAL,JSON.stringify(S));}catch(e){}
 /* ---------- vistas ---------- */
 function render(){ui.view==='list'?renderList():renderAthlete();}
 function renderList(){
-  let h=`<div class="top"><h1>Rutinas femenil</h1><button class="back" data-act="cuenta">Mi cuenta</button><span class="sync ${syncState[0]}">${esc(syncState[1])}</span></div>`;
+  let h=`<div class="top"><h1>Rutinas femenil</h1><span class="sync ${syncState[0]}">${esc(syncState[1])}</span></div>`;
   h+=`<div class="cards">`;
   for(const n of S.orden){const a=S.atletas[n];if(!a)continue;const t=totals(n);
     h+=`<button class="card" data-act="open" data-v="${esc(n)}"><div><b>${esc(n)}</b><span class="lv">${esc(nivTxt(a.nivel))}</span></div><span class="aa">${esUSAG(a.nivel)?f2(t.aa):f2(t.aa)}</span></button>`;}
@@ -461,7 +462,6 @@ root.addEventListener('click',e=>{
   if(b.tagName==='A')e.preventDefault();
   if(act==='open'){ui.atleta=b.dataset.v;ui.view='athlete';ui.ap='BARRAS';ui.open=-1;ui.q='';ui.del=-1;ui.delA=null;return render();}
   if(act==='list'){ui.view='list';ui.delA=null;return render();}
-  if(act==='cuenta')return BKAAcceso.cuenta();
   if(act==='addA'){const n=(document.getElementById('nn').value||'').trim().replace(/\s+/g,' ');const l=document.getElementById('nl').value;
     if(!n)return;if(S.atletas[n]){alert('Ya existe una atleta con ese nombre.');return;}
     S.atletas[n]={nivel:l,r:{SALTO:[],BARRAS:[],VIGA:[],PISO:[]},cr:{},sr:{},cc:{},p:{}};S.orden.push(n);save();ui.atleta=n;ui.view='athlete';ui.ap='BARRAS';return render();}
@@ -512,6 +512,7 @@ async function init(){
   try{if(window.firebase){if(!firebase.apps.length)firebase.initializeApp(FB_CONFIG);cloud=firebase.firestore().collection(COLLECTION).doc(DOC);
     const snap=await cloud.get();if(snap.exists)stored=snap.data();setSync('ok','Guardado en la nube');}}
   catch(e){console.error(e);cloud=null;setSync('warn','Sin nube: guardado en este dispositivo');}
+  if(!cloud)setSync('ok','Guardado en este equipo');
   if(!stored){try{stored=JSON.parse(localStorage.getItem(LOCAL)||'null');}catch(e){}}
   S={atletas:stored?.atletas||{},orden:stored?.orden||[]};
   for(const n of Object.keys(S.atletas)){const a=S.atletas[n];a.r=a.r||{};for(const[ap]of APS)a.r[ap]=a.r[ap]||[];a.cr=a.cr||{};a.sr=a.sr||{};a.cc=a.cc||{};a.p=a.p||{};if(!S.orden.includes(n))S.orden.push(n);}
@@ -522,6 +523,4 @@ async function init(){
     render();});
   render();
 }
-// Editar rutinas pide usuario con permiso de rutinas (cliente/acceso.js).
-BKAAcceso.requiere('rutinas',{modulo:'Editor de rutinas GAF'}).then(init)
-  .catch(()=>{root.innerHTML=`<div class="top"><h1>Rutinas femenil</h1></div><div class="empty">Para editar rutinas necesitas tu usuario. Si no tienes, pide un código al administrador.</div>`;});
+init();

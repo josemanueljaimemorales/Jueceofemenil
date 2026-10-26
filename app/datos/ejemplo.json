@@ -1,75 +1,120 @@
 {
-  "nota": "Rutina de ejemplo para conocer el editor (no corresponde a una gimnasta real). Aparece una sola vez en cada equipo; si el juez la borra, no vuelve.",
+  "nota": "Rutinas reales del Mundial de Yakarta 2025 (finales por aparato) cuya nota D oficial reproduce el editor: salto Angelina Melnikova (Baitova D 5.0 y Cheng D 5.6, +0.2 por direcciones), barras Kaylia Nemour (D 7.1), viga Aiko Sugihara (D 6.0) y suelo Aiko Sugihara (D 5.8). Fuentes: The Gymternet (live blogs y resultados) y Gymnastics Now. Aparece una sola vez en cada equipo; si el juez la borra, no vuelve.",
   "nombre": "EJEMPLO",
   "nivel": "FIG",
   "r": {
     "SALTO": [
       {
-        "k": "F|SALTO|4.35",
-        "n": "Amanar"
+        "k": "F|SALTO|4.34",
+        "n": "Yurchenko doble giro (Baitova)"
+      },
+      {
+        "k": "F|SALTO|5.33",
+        "n": "Cheng"
       }
     ],
     "BARRAS": [
       {
-        "k": "F|BARRAS|1.101",
-        "n": "Kip a barra inferior"
+        "k": "F|BARRAS|4.507",
+        "c": true,
+        "n": "Inbar 1/1"
       },
       {
-        "k": "F|BARRAS|2.201",
-        "n": "Cast a parada de manos"
+        "k": "F|BARRAS|4.708",
+        "c": true,
+        "n": "Nemour"
       },
       {
-        "k": "F|BARRAS|3.403",
-        "n": "Tkatchev",
-        "c": true
+        "k": "F|BARRAS|3.404",
+        "c": true,
+        "n": "Pak"
+      },
+      {
+        "k": "F|BARRAS|5.409",
+        "c": true,
+        "n": "Maloney"
+      },
+      {
+        "k": "F|BARRAS|4.404",
+        "c": true,
+        "n": "Stalder 1/1 (Frederick)"
+      },
+      {
+        "k": "F|BARRAS|4.502",
+        "var": "1",
+        "c": true,
+        "n": "Stalder Tkatchev ½ a mixto (Fenton/Derwael)"
       },
       {
         "k": "F|BARRAS|3.407",
+        "c": true,
         "n": "Ejova"
       },
       {
-        "k": "F|BARRAS|4.405",
-        "n": "Stalder a parada"
+        "k": "F|BARRAS|4.505",
+        "n": "Stalder Shaposhnikova ½ (Chow ½)"
       },
       {
-        "k": "F|BARRAS|2.406",
-        "n": "Shaposhnikova"
+        "k": "F|BARRAS|5.408",
+        "c": true,
+        "n": "Toe-on 1/1"
       },
       {
-        "k": "F|BARRAS|6.505",
-        "n": "Doble atrás agrupado con 1½ (Mustafina)"
+        "k": "F|BARRAS|6.406",
+        "n": "Doble atrás extendido"
       }
     ],
     "VIGA": [
       {
-        "k": "F|VIGA|5.202",
-        "n": "Flic-flac",
-        "c": true
+        "k": "F|VIGA|1.401",
+        "c": true,
+        "n": "Entrada: zancada con cambio"
       },
       {
-        "k": "F|VIGA|5.512",
-        "n": "Mortal atrás extendido"
+        "k": "F|VIGA|2.408",
+        "var": "1",
+        "c": true,
+        "n": "Zancada anillo (split ring)"
+      },
+      {
+        "k": "F|VIGA|5.207",
+        "n": "Korbut (flic-flac a horcajadas)"
+      },
+      {
+        "k": "F|VIGA|5.409",
+        "c": true,
+        "n": "Paloma adelante aérea"
+      },
+      {
+        "k": "F|VIGA|2.202",
+        "c": true,
+        "n": "Salto split"
+      },
+      {
+        "k": "F|VIGA|2.203",
+        "n": "Salto abierto (straddle)"
+      },
+      {
+        "k": "F|VIGA|5.202",
+        "c": true,
+        "n": "Flic-flac"
+      },
+      {
+        "k": "F|VIGA|5.312",
+        "pos": "s",
+        "n": "Mortal atrás extendido con paso"
+      },
+      {
+        "k": "F|VIGA|3.305",
+        "n": "Giro 1/1 en Y"
+      },
+      {
+        "k": "F|VIGA|5.408",
+        "n": "Rueda aérea"
       },
       {
         "k": "F|VIGA|2.505",
-        "n": "Zancada con cambio a anillo",
-        "c": true
-      },
-      {
-        "k": "F|VIGA|2.208",
-        "n": "Sissone a anillo"
-      },
-      {
-        "k": "F|VIGA|3.101",
-        "n": "Giro 1/1"
-      },
-      {
-        "k": "F|VIGA|3.302",
-        "n": "Giro 1/1 en attitude"
-      },
-      {
-        "k": "F|VIGA|2.101",
-        "n": "Zancada adelante"
+        "n": "Zancada con cambio a anillo"
       },
       {
         "k": "F|VIGA|6.505",
@@ -78,58 +123,99 @@
     ],
     "PISO": [
       {
+        "k": "F|PISO|2.402",
+        "n": "Giro 2/1 en L"
+      },
+      {
         "k": "F|PISO|3.106",
-        "n": "Rondada",
-        "c": true
+        "c": true,
+        "n": "Rondada"
       },
       {
         "k": "F|PISO|3.107",
-        "n": "Flic-flac",
-        "c": true
+        "c": true,
+        "n": "Flic-flac"
       },
       {
         "k": "F|PISO|5.603",
         "n": "Doble atrás extendido"
       },
       {
-        "k": "F|PISO|1.404",
-        "n": "Zancada con cambio con 1/1",
-        "c": true
-      },
-      {
-        "k": "F|PISO|1.304",
-        "n": "Frolova"
-      },
-      {
-        "k": "F|PISO|5.401",
-        "n": "Mortal atrás extendido 2½",
-        "c": true
-      },
-      {
-        "k": "F|PISO|4.302",
-        "n": "Mortal adelante extendido 1/1"
-      },
-      {
-        "k": "F|PISO|2.201",
-        "n": "Giro 2/1"
-      },
-      {
-        "k": "F|PISO|1.310",
-        "n": "Salto extendido 2/1"
-      },
-      {
         "k": "F|PISO|3.106",
-        "n": "Rondada",
-        "c": true
+        "c": true,
+        "n": "Rondada"
       },
       {
         "k": "F|PISO|3.107",
-        "n": "Flic-flac",
-        "c": true
+        "c": true,
+        "n": "Flic-flac"
+      },
+      {
+        "k": "F|PISO|5.301",
+        "gir": "540",
+        "c": true,
+        "n": "Mortal atrás extendido 1½"
+      },
+      {
+        "k": "F|PISO|3.106",
+        "c": true,
+        "n": "Rondada"
+      },
+      {
+        "k": "F|PISO|3.107",
+        "c": true,
+        "n": "Flic-flac"
       },
       {
         "k": "F|PISO|5.402",
         "n": "Doble atrás agrupado"
+      },
+      {
+        "k": "F|PISO|1.305",
+        "c": true,
+        "n": "Zancada con cambio a anillo"
+      },
+      {
+        "k": "F|PISO|1.302",
+        "n": "Tour jeté ½"
+      },
+      {
+        "k": "F|PISO|2.403",
+        "n": "Memmel"
+      },
+      {
+        "k": "F|PISO|3.106",
+        "c": true,
+        "n": "Rondada"
+      },
+      {
+        "k": "F|PISO|3.107",
+        "c": true,
+        "n": "Flic-flac"
+      },
+      {
+        "k": "F|PISO|5.401",
+        "c": true,
+        "n": "Mortal atrás extendido 2½"
+      },
+      {
+        "k": "F|PISO|4.202",
+        "n": "Mortal adelante extendido"
+      },
+      {
+        "k": "F|PISO|3.106",
+        "c": true,
+        "n": "Rondada"
+      },
+      {
+        "k": "F|PISO|3.107",
+        "c": true,
+        "n": "Flic-flac"
+      },
+      {
+        "k": "F|PISO|5.402",
+        "var": "1",
+        "n": "Doble atrás carpado"
       }
     ]
   }

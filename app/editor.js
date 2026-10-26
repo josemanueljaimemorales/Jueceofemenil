@@ -213,8 +213,9 @@ const esSaltoFX=x=>!!x&&!!x.e&&x.ap==='PISO'&&(x.g===4||x.g===5);
 // Barras: vuelos y giros [UB-06…UB-10]
 const vueloUB=x=>!!x.e&&(x.g===6||inL(FL.UB.vuelo_ba_bi,x)||inL(FL.UB.vuelo_bi_ba,x)||inL(FL.UB.vuelo_misma,x));
 const vueloMB=x=>inL(FL.UB.vuelo_misma,x)||inL(FL.UB.vuelo_bi_ba,x);
-// En barra alta: gigantes y balanceos (grupo 3), vuelos que salen de la BA hacia la BI (Pak, Ejova…) y lo que no dice que sea en la BI.
-const enBA=x=>x.g===3||inL(FL.UB.vuelo_ba_bi,x)||!(/\bLB\b/.test(x.txt)&&!/\bHB\b/.test(x.txt));
+// En barra alta (para "D con vuelo + C en BA"): gigantes y balanceos (grupo 3) y lo que no dice que sea en la BI. Los vuelos que
+// salen de la BA y terminan en la BI (Pak, Ejova…) NO cuentan: comprobado con la D oficial del Mundial 2025 (Nemour, Melnikova).
+const enBA=x=>!inL(FL.UB.vuelo_ba_bi,x)&&(x.g===3||!(/\bLB\b/.test(x.txt)&&!/\bHB\b/.test(x.txt)));
 function cvUB(A,B){const va=A.v,vb=B.v,lo=Math.min(va,vb),hi=Math.max(va,vb);
   const okCD=x=>x.v<.5?(vueloUB(x)||x.giro>=180):true;
   if(va>=.4&&vueloMB(A)&&vb>=.3&&okCD(A)&&okCD(B)&&enBA(B))return{v:.2};
@@ -332,7 +333,7 @@ function computeFIG(a,ap){
   if(ap==='BARRAS'){
     set(0,[C.find(x=>inL(L.vuelo_ba_bi,x))]);
     set(1,[C.find(x=>inL(L.vuelo_misma,x))]);
-    set(2,[C.find(x=>x.g!==1&&x.g!==6&&!inL(L.casts,x)&&(x.r.agr?x.r.agr!=='reg':inL(L.agarre_auto,x)))]);
+    set(2,[C.find(x=>x.g!==1&&x.g!==6&&!inL(L.casts,x)&&(x.r.agr?x.r.agr!=='reg':inL(L.agarre_auto,x)||inL(L.jaeger,x)))]);   // el Jaeger sale de agarre cubital o en L
     set(3,[C.find(x=>x.g!==1&&inL(L.giro360,x))]);
     items.forEach(x=>{if(inL(L.agarre_variable,x)&&!x.r.agr)notes.push(`${h(x)}: elige el agarre en el elemento (cumple CR3 solo en cubital, L o mixto).`);});
   }else if(ap==='VIGA'){

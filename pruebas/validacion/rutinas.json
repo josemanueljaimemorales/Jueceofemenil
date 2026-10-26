@@ -1,0 +1,2008 @@
+[
+ {
+  "id": "VT1",
+  "atleta": "Angelina Melnikova (AIN)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (24-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "SALTO",
+  "variante_de_comprobacion": false,
+  "D_oficial": "5.0 / 5.6, bono +0.2",
+  "D_editor": [
+   5,
+   5.6
+  ],
+  "desglose_editor": {
+   "promedio_D_con_bono": 5.5
+  },
+  "clasificacion": "coincide",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/24/2025-world-championships-apparatus-finals-day-1-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|SALTO|4.34",
+    "n": "Yurchenko doble giro (Baitova)"
+   },
+   {
+    "k": "F|SALTO|5.33",
+    "n": "Cheng"
+   }
+  ]
+ },
+ {
+  "id": "VT2",
+  "atleta": "Lia Monica Fontaine (CAN)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (24-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "SALTO",
+  "variante_de_comprobacion": false,
+  "D_oficial": "5.0 / 4.8, bono +0.2",
+  "D_editor": [
+   5,
+   4.8
+  ],
+  "desglose_editor": {
+   "promedio_D_con_bono": 5.1
+  },
+  "clasificacion": "coincide",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/24/2025-world-championships-apparatus-finals-day-1-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|SALTO|4.34",
+    "n": "Yurchenko doble giro (Baitova)"
+   },
+   {
+    "k": "F|SALTO|5.31",
+    "n": "Rondada flic-flac ½ – mortal adelante extendido ½"
+   }
+  ]
+ },
+ {
+  "id": "VT3",
+  "atleta": "Joscelyn Roberson (USA)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (24-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "SALTO",
+  "variante_de_comprobacion": false,
+  "D_oficial": "5.2 / 5.0, bono +0.2",
+  "D_editor": [
+   5.2,
+   5
+  ],
+  "desglose_editor": {
+   "promedio_D_con_bono": 5.3
+  },
+  "clasificacion": "coincide",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/24/2025-world-championships-apparatus-finals-day-1-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|SALTO|5.32",
+    "n": "Yurchenko ½ – mortal adelante extendido 1/1 (Mustafina)"
+   },
+   {
+    "k": "F|SALTO|4.34",
+    "n": "Yurchenko doble giro (Baitova)"
+   }
+  ]
+ },
+ {
+  "id": "VT4",
+  "atleta": "Lisa Vaelen (BEL)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (24-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "SALTO",
+  "variante_de_comprobacion": false,
+  "D_oficial": "5.4 / 4.4, bono +0.2",
+  "D_editor": [
+   5.4,
+   4.4
+  ],
+  "desglose_editor": {
+   "promedio_D_con_bono": 5.1
+  },
+  "clasificacion": "coincide",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/24/2025-world-championships-apparatus-finals-day-1-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|SALTO|2.33",
+    "n": "Inversión – mortal adelante extendido 1½ (Rudi)"
+   },
+   {
+    "k": "F|SALTO|3.32",
+    "n": "Tsukahara extendido 1/1 (Kim)"
+   }
+  ]
+ },
+ {
+  "id": "VT5",
+  "atleta": "Karina Schönmaier (GER)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (24-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "SALTO",
+  "variante_de_comprobacion": false,
+  "D_oficial": "5.6 / 5.0, bono +0.2 (−2.0 ND en el 1.º por apoyo de una mano)",
+  "D_editor": [
+   5.6,
+   5
+  ],
+  "desglose_editor": {
+   "promedio_D_con_bono": 5.5
+  },
+  "clasificacion": "coincide",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/24/2025-world-championships-apparatus-finals-day-1-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|SALTO|5.33",
+    "n": "Cheng"
+   },
+   {
+    "k": "F|SALTO|4.34",
+    "n": "Yurchenko doble giro (Baitova)"
+   }
+  ]
+ },
+ {
+  "id": "VT6",
+  "atleta": "Anna Kalmykova (AIN)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (24-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "SALTO",
+  "variante_de_comprobacion": false,
+  "D_oficial": "5.4 / 4.6, sin bono (caída en el 1.º)",
+  "D_editor": [
+   5.4,
+   4.6
+  ],
+  "desglose_editor": {
+   "promedio_D_con_bono": 5
+  },
+  "clasificacion": "coincide",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/24/2025-world-championships-apparatus-finals-day-1-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|SALTO|2.33",
+    "caida": true,
+    "n": "Inversión – mortal adelante extendido 1½ (Rudi)"
+   },
+   {
+    "k": "F|SALTO|4.33",
+    "n": "Yurchenko 1½"
+   }
+  ]
+ },
+ {
+  "id": "VT7",
+  "atleta": "Charlize Mörz (AUT)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (24-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "SALTO",
+  "variante_de_comprobacion": false,
+  "D_oficial": "3.8 / 4.4, bono +0.2 (1.º devaluado: intentó inversión mortal extendido ½, hizo agrupado ½)",
+  "D_editor": [
+   3.8,
+   4.4
+  ],
+  "desglose_editor": {
+   "promedio_D_con_bono": 4.3
+  },
+  "clasificacion": "coincide",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/24/2025-world-championships-apparatus-finals-day-1-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|SALTO|2.11",
+    "n": "Inversión – mortal adelante agrupado ½"
+   },
+   {
+    "k": "F|SALTO|3.32",
+    "n": "Tsukahara extendido 1/1 (Kim)"
+   }
+  ]
+ },
+ {
+  "id": "UB1",
+  "atleta": "Kaylia Nemour (ALG)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (24-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "BARRAS",
+  "variante_de_comprobacion": false,
+  "D_oficial": 7.1,
+  "D_editor": 7.2,
+  "desglose_editor": {
+   "dv": 3.8,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 1.2,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "no coincide: bug del editor (CV)",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/24/2025-world-championships-apparatus-finals-day-1-live-blog/",
+   "https://www.theixsports.com/newsletter/jordyn-wieber-resigns/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|BARRAS|4.507",
+    "c": true,
+    "n": "Inbar 1/1"
+   },
+   {
+    "k": "F|BARRAS|4.708",
+    "c": true,
+    "n": "Nemour"
+   },
+   {
+    "k": "F|BARRAS|3.404",
+    "c": true,
+    "n": "Pak"
+   },
+   {
+    "k": "F|BARRAS|5.409",
+    "c": true,
+    "n": "Maloney"
+   },
+   {
+    "k": "F|BARRAS|4.404",
+    "c": true,
+    "n": "Stalder 1/1 (Frederick)"
+   },
+   {
+    "k": "F|BARRAS|4.502",
+    "var": "1",
+    "c": true,
+    "n": "Stalder Tkatchev ½ a mixto (Fenton/Derwael)"
+   },
+   {
+    "k": "F|BARRAS|3.407",
+    "c": true,
+    "n": "Ejova"
+   },
+   {
+    "k": "F|BARRAS|4.505",
+    "n": "Stalder Shaposhnikova ½ (Chow ½)"
+   },
+   {
+    "k": "F|BARRAS|5.408",
+    "c": true,
+    "n": "Toe-on 1/1"
+   },
+   {
+    "k": "F|BARRAS|6.406",
+    "n": "Doble atrás extendido"
+   }
+  ]
+ },
+ {
+  "id": "UB2",
+  "atleta": "Angelina Melnikova (AIN)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (24-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "BARRAS",
+  "variante_de_comprobacion": false,
+  "D_oficial": 6.3,
+  "D_editor": 5.9,
+  "desglose_editor": {
+   "dv": 3.5,
+   "cr": 1.5,
+   "crBits": "1101",
+   "cv": 0.7,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "no coincide: bug (CR3 y CV)",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/24/2025-world-championships-apparatus-finals-day-1-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|BARRAS|4.507",
+    "c": true,
+    "n": "Inbar 1/1"
+   },
+   {
+    "k": "F|BARRAS|4.508",
+    "c": true,
+    "n": "Komova II"
+   },
+   {
+    "k": "F|BARRAS|3.404",
+    "c": true,
+    "n": "Pak"
+   },
+   {
+    "k": "F|BARRAS|5.509",
+    "n": "Van Leeuwen"
+   },
+   {
+    "k": "F|BARRAS|4.407",
+    "gir": "180",
+    "c": true,
+    "n": "Inbar ½"
+   },
+   {
+    "k": "F|BARRAS|3.408",
+    "var": "2",
+    "n": "Jaeger carpado"
+   },
+   {
+    "k": "F|BARRAS|5.408",
+    "c": true,
+    "n": "Toe-on 1/1"
+   },
+   {
+    "k": "F|BARRAS|6.405",
+    "n": "Doble atrás agrupado con 1/1 (full-in)"
+   }
+  ]
+ },
+ {
+  "id": "UB3",
+  "atleta": "Skye Blakely (USA)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (24-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "BARRAS",
+  "variante_de_comprobacion": false,
+  "D_oficial": 6.2,
+  "D_editor": 6.1,
+  "desglose_editor": {
+   "dv": 3.5,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.4,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "no concluyente (salida)",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/24/2025-world-championships-apparatus-finals-day-1-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|BARRAS|4.404",
+    "c": true,
+    "n": "Stalder 1/1 (Frederick)"
+   },
+   {
+    "k": "F|BARRAS|5.510",
+    "n": "Church"
+   },
+   {
+    "k": "F|BARRAS|4.602",
+    "c": true,
+    "n": "Downie"
+   },
+   {
+    "k": "F|BARRAS|3.404",
+    "n": "Pak"
+   },
+   {
+    "k": "F|BARRAS|5.408",
+    "c": true,
+    "n": "Toe-on 1/1"
+   },
+   {
+    "k": "F|BARRAS|5.509",
+    "n": "Van Leeuwen"
+   },
+   {
+    "k": "F|BARRAS|5.308",
+    "gir": "180",
+    "c": true,
+    "n": "Toe-on ½"
+   },
+   {
+    "k": "F|BARRAS|3.206",
+    "agr": "mix",
+    "c": true,
+    "n": "Gigante adelante (mixto)"
+   },
+   {
+    "k": "F|BARRAS|6.508",
+    "n": "Doble adelante agrupado ½ (Arai)"
+   }
+  ]
+ },
+ {
+  "id": "UB4",
+  "atleta": "Yang Fanyuwei (CHN)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (24-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "BARRAS",
+  "variante_de_comprobacion": false,
+  "D_oficial": 6.7,
+  "D_editor": 6.9,
+  "desglose_editor": {
+   "dv": 4.1,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.6,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "explicada por ejecución (sin CV a la pirueta)",
+  "dudas": "la \"front pirouette\" tras el cambio de agarre no se identifica (3.306 C, 3.506 E o 3.410/3.510 en L)",
+  "fuentes": [
+   "https://thegymter.net/2025/10/24/2025-world-championships-apparatus-finals-day-1-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|BARRAS|3.506",
+    "c": true,
+    "n": "Pirueta adelante cubital 1/1"
+   },
+   {
+    "k": "F|BARRAS|3.708",
+    "var": "1",
+    "n": "Yang (Jaeger extendido 1/1)"
+   },
+   {
+    "k": "F|BARRAS|4.602",
+    "c": true,
+    "n": "Downie"
+   },
+   {
+    "k": "F|BARRAS|3.404",
+    "n": "Pak"
+   },
+   {
+    "k": "F|BARRAS|4.404",
+    "c": true,
+    "n": "Stalder 1/1 (Frederick)"
+   },
+   {
+    "k": "F|BARRAS|5.509",
+    "n": "Van Leeuwen"
+   },
+   {
+    "k": "F|BARRAS|5.408",
+    "c": true,
+    "n": "Toe-on 1/1"
+   },
+   {
+    "k": "F|BARRAS|6.606",
+    "n": "Doble atrás extendido con 1/1"
+   }
+  ]
+ },
+ {
+  "id": "UB5",
+  "atleta": "Kate McDonald (AUS)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (24-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "BARRAS",
+  "variante_de_comprobacion": false,
+  "D_oficial": 6,
+  "D_editor": 5.8,
+  "desglose_editor": {
+   "dv": 3.5,
+   "cr": 1.5,
+   "crBits": "1101",
+   "cv": 0.6,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "no concluyente",
+  "dudas": "Tkatchev extendido/abierto (D, Gymternet) o carpado (E, Gymnastics Now); Weiler ½ \"un poco corto\"",
+  "fuentes": [
+   "https://thegymter.net/2025/10/24/2025-world-championships-apparatus-finals-day-1-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|BARRAS|2.404",
+    "gir": "180",
+    "c": true,
+    "n": "Weiler ½"
+   },
+   {
+    "k": "F|BARRAS|5.409",
+    "c": true,
+    "n": "Maloney"
+   },
+   {
+    "k": "F|BARRAS|2.405",
+    "n": "Vuelta libre 1/1"
+   },
+   {
+    "k": "F|BARRAS|3.403",
+    "c": true,
+    "n": "Tkatchev"
+   },
+   {
+    "k": "F|BARRAS|3.404",
+    "n": "Pak"
+   },
+   {
+    "k": "F|BARRAS|5.509",
+    "n": "Van Leeuwen"
+   },
+   {
+    "k": "F|BARRAS|5.408",
+    "c": true,
+    "n": "Toe-on 1/1"
+   },
+   {
+    "k": "F|BARRAS|6.606",
+    "n": "Doble atrás extendido con 1/1"
+   }
+  ]
+ },
+ {
+  "id": "UB6",
+  "atleta": "Naomi Visser (NED)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (24-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "BARRAS",
+  "variante_de_comprobacion": false,
+  "D_oficial": 6.2,
+  "D_editor": 5.9,
+  "desglose_editor": {
+   "dv": 3.7,
+   "cr": 1.5,
+   "crBits": "1101",
+   "cv": 0.5,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "no concluyente",
+  "dudas": "Gymternet: Downie (F) a Pak; Gymnastics Now: \"stalder Tkatchev carpado\" (Downie). Perdió la conexión al Van Leeuwen",
+  "fuentes": [
+   "https://thegymter.net/2025/10/24/2025-world-championships-apparatus-finals-day-1-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|BARRAS|4.602",
+    "c": true,
+    "n": "Downie"
+   },
+   {
+    "k": "F|BARRAS|3.404",
+    "n": "Pak"
+   },
+   {
+    "k": "F|BARRAS|5.409",
+    "c": true,
+    "n": "Maloney"
+   },
+   {
+    "k": "F|BARRAS|2.305",
+    "gir": "180",
+    "c": true,
+    "n": "Vuelta libre ½"
+   },
+   {
+    "k": "F|BARRAS|3.407",
+    "n": "Ejova"
+   },
+   {
+    "k": "F|BARRAS|4.404",
+    "n": "Stalder 1/1 (Frederick)"
+   },
+   {
+    "k": "F|BARRAS|5.509",
+    "n": "Van Leeuwen"
+   },
+   {
+    "k": "F|BARRAS|5.408",
+    "c": true,
+    "n": "Toe-on 1/1"
+   },
+   {
+    "k": "F|BARRAS|6.606",
+    "n": "Doble atrás extendido con 1/1"
+   }
+  ]
+ },
+ {
+  "id": "BB1",
+  "atleta": "Aiko Sugihara (JPN)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (25-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "VIGA",
+  "variante_de_comprobacion": false,
+  "D_oficial": 6,
+  "D_editor": 6,
+  "desglose_editor": {
+   "dv": 3.2,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.4,
+   "sb": 0.2,
+   "dmt": 0.2
+  },
+  "clasificacion": "coincide",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/25/2025-world-championships-apparatus-finals-day-2-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|VIGA|1.401",
+    "c": true,
+    "n": "Entrada: zancada con cambio"
+   },
+   {
+    "k": "F|VIGA|2.408",
+    "var": "1",
+    "c": true,
+    "n": "Zancada anillo (split ring)"
+   },
+   {
+    "k": "F|VIGA|5.207",
+    "n": "Korbut (flic-flac a horcajadas)"
+   },
+   {
+    "k": "F|VIGA|5.409",
+    "c": true,
+    "n": "Paloma adelante aérea"
+   },
+   {
+    "k": "F|VIGA|2.202",
+    "c": true,
+    "n": "Salto split"
+   },
+   {
+    "k": "F|VIGA|2.203",
+    "n": "Salto abierto (straddle)"
+   },
+   {
+    "k": "F|VIGA|5.202",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|VIGA|5.312",
+    "pos": "s",
+    "n": "Mortal atrás extendido con paso"
+   },
+   {
+    "k": "F|VIGA|3.305",
+    "n": "Giro 1/1 en Y"
+   },
+   {
+    "k": "F|VIGA|5.408",
+    "n": "Rueda aérea"
+   },
+   {
+    "k": "F|VIGA|2.505",
+    "n": "Zancada con cambio a anillo"
+   },
+   {
+    "k": "F|VIGA|6.505",
+    "n": "Doble atrás carpado (salida)"
+   }
+  ]
+ },
+ {
+  "id": "BB2",
+  "atleta": "Flavia Saraiva (BRA)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (25-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "VIGA",
+  "variante_de_comprobacion": false,
+  "D_oficial": 5.7,
+  "D_editor": 5.7,
+  "desglose_editor": {
+   "dv": 3.1,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.3,
+   "sb": 0.1,
+   "dmt": 0.2
+  },
+  "clasificacion": "coincide",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/25/2025-world-championships-apparatus-finals-day-2-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|VIGA|1.417",
+    "n": "Entrada: rondada flic-flac"
+   },
+   {
+    "k": "F|VIGA|3.101",
+    "n": "Giro 1/1"
+   },
+   {
+    "k": "F|VIGA|5.202",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|VIGA|5.312",
+    "pos": "s",
+    "n": "Mortal atrás extendido con paso"
+   },
+   {
+    "k": "F|VIGA|2.505",
+    "n": "Zancada con cambio a anillo"
+   },
+   {
+    "k": "F|VIGA|5.409",
+    "c": true,
+    "n": "Paloma adelante aérea"
+   },
+   {
+    "k": "F|VIGA|2.408",
+    "c": true,
+    "n": "Zancada anillo (split ring)"
+   },
+   {
+    "k": "F|VIGA|5.202",
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|VIGA|5.411",
+    "n": "Mortal lateral"
+   },
+   {
+    "k": "F|VIGA|2.101",
+    "c": true,
+    "n": "Zancada split"
+   },
+   {
+    "k": "F|VIGA|2.202",
+    "n": "Salto split"
+   },
+   {
+    "k": "F|VIGA|6.505",
+    "n": "Doble atrás carpado (salida)"
+   }
+  ]
+ },
+ {
+  "id": "BB3",
+  "atleta": "Ellie Black (CAN)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (25-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "VIGA",
+  "variante_de_comprobacion": false,
+  "D_oficial": 5.8,
+  "D_editor": 5.9,
+  "desglose_editor": {
+   "dv": 3.1,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.5,
+   "sb": 0.1,
+   "dmt": 0.2
+  },
+  "clasificacion": "explicada por ejecución o regla de orden (giros)",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/25/2025-world-championships-apparatus-finals-day-2-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|VIGA|1.401",
+    "c": true,
+    "n": "Entrada: zancada con cambio"
+   },
+   {
+    "k": "F|VIGA|2.405",
+    "c": true,
+    "n": "Zancada con cambio ½"
+   },
+   {
+    "k": "F|VIGA|5.207",
+    "n": "Korbut (flic-flac a horcajadas)"
+   },
+   {
+    "k": "F|VIGA|3.401",
+    "c": true,
+    "n": "Giro 2/1"
+   },
+   {
+    "k": "F|VIGA|3.101",
+    "n": "Giro 1/1"
+   },
+   {
+    "k": "F|VIGA|2.203",
+    "c": true,
+    "n": "Salto abierto (straddle)"
+   },
+   {
+    "k": "F|VIGA|2.112",
+    "n": "Salto lobo"
+   },
+   {
+    "k": "F|VIGA|5.410",
+    "n": "Mortal adelante agrupado"
+   },
+   {
+    "k": "F|VIGA|4.108",
+    "var": "1",
+    "c": true,
+    "n": "Tic-toc"
+   },
+   {
+    "k": "F|VIGA|5.202",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|VIGA|5.512",
+    "n": "Mortal atrás extendido (dos pies)"
+   },
+   {
+    "k": "F|VIGA|5.411",
+    "n": "Mortal lateral"
+   },
+   {
+    "k": "F|VIGA|6.404",
+    "n": "Mortal atrás extendido 2½ (salida)"
+   }
+  ]
+ },
+ {
+  "id": "BB4",
+  "atleta": "Kaylia Nemour (ALG)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (25-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "VIGA",
+  "variante_de_comprobacion": false,
+  "D_oficial": 6.2,
+  "D_editor": 6.1,
+  "desglose_editor": {
+   "dv": 3.3,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.4,
+   "sb": 0.2,
+   "dmt": 0.2
+  },
+  "clasificacion": "no concluyente (entrada; HD p. 17)",
+  "dudas": "entrada: Gymternet \"layout stepout mount\" (1.518, E) vs Gymnastics Now \"roundoff layout\" (1.618 variante extendido a dos pies, F); con E la cuenta da 6.1",
+  "fuentes": [
+   "https://thegymter.net/2025/10/25/2025-world-championships-apparatus-finals-day-2-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|VIGA|1.618",
+    "var": "1",
+    "c": true,
+    "n": "Entrada: rondada mortal atrás extendido"
+   },
+   {
+    "k": "F|VIGA|5.312",
+    "pos": "s",
+    "n": "Mortal atrás extendido con paso"
+   },
+   {
+    "k": "F|VIGA|5.202",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|VIGA|5.202",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|VIGA|5.512",
+    "n": "Mortal atrás extendido (dos pies)"
+   },
+   {
+    "k": "F|VIGA|5.409",
+    "c": true,
+    "n": "Paloma adelante aérea"
+   },
+   {
+    "k": "F|VIGA|2.202",
+    "c": true,
+    "n": "Salto split"
+   },
+   {
+    "k": "F|VIGA|2.203",
+    "n": "Salto abierto (straddle)"
+   },
+   {
+    "k": "F|VIGA|2.305",
+    "c": true,
+    "n": "Zancada con cambio"
+   },
+   {
+    "k": "F|VIGA|2.405",
+    "n": "Zancada con cambio ½"
+   },
+   {
+    "k": "F|VIGA|5.408",
+    "n": "Rueda aérea"
+   },
+   {
+    "k": "F|VIGA|3.207",
+    "n": "Giro 1/1 en cuclillas (lobo)"
+   },
+   {
+    "k": "F|VIGA|6.505",
+    "n": "Doble atrás carpado (salida)"
+   }
+  ]
+ },
+ {
+  "id": "BB5",
+  "atleta": "Zhang Qingying (CHN)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (25-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "VIGA",
+  "variante_de_comprobacion": false,
+  "D_oficial": 6.9,
+  "D_editor": 6.8,
+  "desglose_editor": {
+   "dv": 3.3,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.9,
+   "sb": 0.4,
+   "dmt": 0.2
+  },
+  "clasificacion": "no concluyente (descripción)",
+  "dudas": "\"switch half/switch side ¼\" (aquí Johnson 2.306), \"straddle ¾\" (aquí 2.303 C), \"roundoff layout\" vs \"layout series\"",
+  "fuentes": [
+   "https://thegymter.net/2025/10/25/2025-world-championships-apparatus-finals-day-2-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|VIGA|1.401",
+    "c": true,
+    "n": "Entrada: zancada con cambio"
+   },
+   {
+    "k": "F|VIGA|2.405",
+    "c": true,
+    "n": "Zancada con cambio ½"
+   },
+   {
+    "k": "F|VIGA|5.207",
+    "n": "Korbut (flic-flac a horcajadas)"
+   },
+   {
+    "k": "F|VIGA|5.208",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|VIGA|5.512",
+    "c": true,
+    "n": "Mortal atrás extendido (dos pies)"
+   },
+   {
+    "k": "F|VIGA|2.202",
+    "n": "Salto split"
+   },
+   {
+    "k": "F|VIGA|2.505",
+    "c": true,
+    "n": "Zancada con cambio a anillo"
+   },
+   {
+    "k": "F|VIGA|5.202",
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|VIGA|2.306",
+    "c": true,
+    "n": "Johnson"
+   },
+   {
+    "k": "F|VIGA|2.203",
+    "c": true,
+    "n": "Salto abierto (straddle)"
+   },
+   {
+    "k": "F|VIGA|5.405",
+    "var": "1",
+    "n": "Yurchenko loop (flic-flac lateral a vuelta atrás)"
+   },
+   {
+    "k": "F|VIGA|2.305",
+    "c": true,
+    "n": "Zancada con cambio"
+   },
+   {
+    "k": "F|VIGA|2.302",
+    "c": true,
+    "n": "Salto split ½"
+   },
+   {
+    "k": "F|VIGA|2.303",
+    "n": "Salto abierto ½"
+   },
+   {
+    "k": "F|VIGA|3.101",
+    "n": "Giro 1/1"
+   },
+   {
+    "k": "F|VIGA|6.505",
+    "n": "Doble atrás carpado (salida)"
+   }
+  ]
+ },
+ {
+  "id": "FX1",
+  "atleta": "Aiko Sugihara (JPN)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (25-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "PISO",
+  "variante_de_comprobacion": false,
+  "D_oficial": 5.8,
+  "D_editor": 5.8,
+  "desglose_editor": {
+   "dv": 3.2,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.4,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "coincide",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/25/2025-world-championships-apparatus-finals-day-2-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|PISO|2.402",
+    "n": "Giro 2/1 en L"
+   },
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.603",
+    "n": "Doble atrás extendido"
+   },
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.301",
+    "gir": "540",
+    "c": true,
+    "n": "Mortal atrás extendido 1½"
+   },
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.402",
+    "n": "Doble atrás agrupado"
+   },
+   {
+    "k": "F|PISO|1.305",
+    "c": true,
+    "n": "Zancada con cambio a anillo"
+   },
+   {
+    "k": "F|PISO|1.302",
+    "n": "Tour jeté ½"
+   },
+   {
+    "k": "F|PISO|2.403",
+    "n": "Memmel"
+   },
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.401",
+    "c": true,
+    "n": "Mortal atrás extendido 2½"
+   },
+   {
+    "k": "F|PISO|4.202",
+    "n": "Mortal adelante extendido"
+   },
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.402",
+    "var": "1",
+    "n": "Doble atrás carpado"
+   }
+  ]
+ },
+ {
+  "id": "FX2",
+  "atleta": "Ruby Evans (GBR)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (25-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "PISO",
+  "variante_de_comprobacion": false,
+  "D_oficial": 5.9,
+  "D_editor": 5.9,
+  "desglose_editor": {
+   "dv": 3.3,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.4,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "coincide",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/25/2025-world-championships-apparatus-finals-day-2-live-blog/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|PISO|3.105",
+    "c": true,
+    "n": "Inversión adelante"
+   },
+   {
+    "k": "F|PISO|4.202",
+    "c": true,
+    "n": "Mortal adelante extendido"
+   },
+   {
+    "k": "F|PISO|4.502",
+    "n": "Mortal adelante extendido 2½ (randi)"
+   },
+   {
+    "k": "F|PISO|3.105",
+    "c": true,
+    "n": "Inversión adelante"
+   },
+   {
+    "k": "F|PISO|4.302",
+    "gir": "360",
+    "c": true,
+    "n": "Mortal adelante extendido 1/1"
+   },
+   {
+    "k": "F|PISO|4.402",
+    "n": "Mortal adelante extendido 2/1"
+   },
+   {
+    "k": "F|PISO|1.302",
+    "c": true,
+    "n": "Tour jeté ½"
+   },
+   {
+    "k": "F|PISO|1.404",
+    "n": "Zancada con cambio 1/1"
+   },
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.603",
+    "n": "Doble atrás extendido"
+   },
+   {
+    "k": "F|PISO|2.407",
+    "n": "Giro 2/1 en cuclillas (lobo)"
+   },
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.402",
+    "n": "Doble atrás agrupado"
+   }
+  ]
+ },
+ {
+  "id": "FX3",
+  "atleta": "Sabrina Voinea (ROU)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (25-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "PISO",
+  "variante_de_comprobacion": false,
+  "D_oficial": 5.9,
+  "D_editor": 5.9,
+  "desglose_editor": {
+   "dv": 3.3,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.4,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "coincide",
+  "dudas": "",
+  "fuentes": [
+   "https://thegymter.net/2025/10/25/2025-world-championships-apparatus-finals-day-2-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|PISO|1.307",
+    "n": "Popa"
+   },
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.104",
+    "c": true,
+    "n": "Mortal atrás whip"
+   },
+   {
+    "k": "F|PISO|5.603",
+    "c": true,
+    "n": "Doble atrás extendido"
+   },
+   {
+    "k": "F|PISO|4.101",
+    "n": "Mortal adelante agrupado"
+   },
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.802",
+    "n": "Doble atrás agrupado 2/1 (Silivas)"
+   },
+   {
+    "k": "F|PISO|1.404",
+    "n": "Zancada con cambio 1/1"
+   },
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.502",
+    "n": "Doble atrás con 1/1 (full-in)"
+   },
+   {
+    "k": "F|PISO|2.201",
+    "n": "Giro 2/1"
+   },
+   {
+    "k": "F|PISO|1.205",
+    "c": true,
+    "n": "Zancada con cambio"
+   },
+   {
+    "k": "F|PISO|1.302",
+    "n": "Tour jeté ½"
+   }
+  ]
+ },
+ {
+  "id": "FX4",
+  "atleta": "Rina Kishi (JPN)",
+  "competencia": "Mundial 2025 Yakarta, final por aparato (25-oct-2025)",
+  "nivel": "FIG",
+  "aparato": "PISO",
+  "variante_de_comprobacion": false,
+  "D_oficial": 5.8,
+  "D_editor": 6,
+  "desglose_editor": {
+   "dv": 3.5,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.3,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "explicada por ejecución (Mitchell corto)",
+  "dudas": "la serie de saltos solo se describe como \"leap series ... switch ring half\" (se supone switch leap > Sankova)",
+  "fuentes": [
+   "https://thegymter.net/2025/10/25/2025-world-championships-apparatus-finals-day-2-live-blog/",
+   "https://gymnastics-now.com/event-finals-live-jakarta-2025-worlds/",
+   "https://thegymter.net/2025/10/26/2025-world-championships-results/"
+  ],
+  "filas": [
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.802",
+    "n": "Doble atrás agrupado 2/1 (Silivas)"
+   },
+   {
+    "k": "F|PISO|3.105",
+    "c": true,
+    "n": "Inversión adelante"
+   },
+   {
+    "k": "F|PISO|4.202",
+    "c": true,
+    "n": "Mortal adelante extendido"
+   },
+   {
+    "k": "F|PISO|4.402",
+    "n": "Mortal adelante extendido 2/1"
+   },
+   {
+    "k": "F|PISO|2.507",
+    "c": true,
+    "n": "Giro 3/1 en cuclillas (Mitchell)"
+   },
+   {
+    "k": "F|PISO|2.403",
+    "n": "Memmel"
+   },
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.401",
+    "n": "Mortal atrás extendido 2½"
+   },
+   {
+    "k": "F|PISO|1.205",
+    "c": true,
+    "n": "Zancada con cambio"
+   },
+   {
+    "k": "F|PISO|1.405",
+    "n": "Sankova"
+   },
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.402",
+    "var": "1",
+    "n": "Doble atrás carpado"
+   }
+  ]
+ },
+ {
+  "id": "UB2b",
+  "atleta": "Melnikova UB: Jaeger marcado en agarre cubital (agr=inv)",
+  "competencia": "",
+  "nivel": "FIG",
+  "aparato": "BARRAS",
+  "variante_de_comprobacion": true,
+  "D_oficial": 6.3,
+  "D_editor": 6.4,
+  "desglose_editor": {
+   "dv": 3.5,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.7,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "variante",
+  "dudas": "",
+  "fuentes": [],
+  "filas": [
+   {
+    "k": "F|BARRAS|4.507",
+    "c": true,
+    "n": "Inbar 1/1"
+   },
+   {
+    "k": "F|BARRAS|4.508",
+    "c": true,
+    "n": "Komova II"
+   },
+   {
+    "k": "F|BARRAS|3.404",
+    "c": true,
+    "n": "Pak"
+   },
+   {
+    "k": "F|BARRAS|5.509",
+    "n": "Van Leeuwen"
+   },
+   {
+    "k": "F|BARRAS|4.407",
+    "gir": "180",
+    "c": true,
+    "n": "Inbar ½"
+   },
+   {
+    "k": "F|BARRAS|3.408",
+    "var": "2",
+    "agr": "inv",
+    "n": "Jaeger carpado"
+   },
+   {
+    "k": "F|BARRAS|5.408",
+    "c": true,
+    "n": "Toe-on 1/1"
+   },
+   {
+    "k": "F|BARRAS|6.405",
+    "n": "Doble atrás agrupado con 1/1 (full-in)"
+   }
+  ]
+ },
+ {
+  "id": "UB3b",
+  "atleta": "Blakely UB: salida Pentek (6.608 F) en vez de Arai",
+  "competencia": "",
+  "nivel": "FIG",
+  "aparato": "BARRAS",
+  "variante_de_comprobacion": true,
+  "D_oficial": 6.2,
+  "D_editor": 6.2,
+  "desglose_editor": {
+   "dv": 3.6,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.4,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "variante",
+  "dudas": "",
+  "fuentes": [],
+  "filas": [
+   {
+    "k": "F|BARRAS|4.404",
+    "c": true,
+    "n": "Stalder 1/1 (Frederick)"
+   },
+   {
+    "k": "F|BARRAS|5.510",
+    "n": "Church"
+   },
+   {
+    "k": "F|BARRAS|4.602",
+    "c": true,
+    "n": "Downie"
+   },
+   {
+    "k": "F|BARRAS|3.404",
+    "n": "Pak"
+   },
+   {
+    "k": "F|BARRAS|5.408",
+    "c": true,
+    "n": "Toe-on 1/1"
+   },
+   {
+    "k": "F|BARRAS|5.509",
+    "n": "Van Leeuwen"
+   },
+   {
+    "k": "F|BARRAS|5.308",
+    "gir": "180",
+    "c": true,
+    "n": "Toe-on ½"
+   },
+   {
+    "k": "F|BARRAS|3.206",
+    "agr": "mix",
+    "c": true,
+    "n": "Gigante adelante (mixto)"
+   },
+   {
+    "k": "F|BARRAS|6.608",
+    "n": "Doble adelante carpado ½ (Pentek)"
+   }
+  ]
+ },
+ {
+  "id": "UB4b",
+  "atleta": "Yang UB: pirueta sin conexión al Yang",
+  "competencia": "",
+  "nivel": "FIG",
+  "aparato": "BARRAS",
+  "variante_de_comprobacion": true,
+  "D_oficial": 6.7,
+  "D_editor": 6.7,
+  "desglose_editor": {
+   "dv": 4.1,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.4,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "variante",
+  "dudas": "",
+  "fuentes": [],
+  "filas": [
+   {
+    "k": "F|BARRAS|3.506",
+    "n": "Pirueta adelante cubital 1/1"
+   },
+   {
+    "k": "F|BARRAS|3.708",
+    "var": "1",
+    "n": "Yang (Jaeger extendido 1/1)"
+   },
+   {
+    "k": "F|BARRAS|4.602",
+    "c": true,
+    "n": "Downie"
+   },
+   {
+    "k": "F|BARRAS|3.404",
+    "n": "Pak"
+   },
+   {
+    "k": "F|BARRAS|4.404",
+    "c": true,
+    "n": "Stalder 1/1 (Frederick)"
+   },
+   {
+    "k": "F|BARRAS|5.509",
+    "n": "Van Leeuwen"
+   },
+   {
+    "k": "F|BARRAS|5.408",
+    "c": true,
+    "n": "Toe-on 1/1"
+   },
+   {
+    "k": "F|BARRAS|6.606",
+    "n": "Doble atrás extendido con 1/1"
+   }
+  ]
+ },
+ {
+  "id": "UB5b",
+  "atleta": "McDonald UB: Weiler ½ en cubital (agr=inv)",
+  "competencia": "",
+  "nivel": "FIG",
+  "aparato": "BARRAS",
+  "variante_de_comprobacion": true,
+  "D_oficial": 6,
+  "D_editor": 6.3,
+  "desglose_editor": {
+   "dv": 3.5,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.6,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "variante",
+  "dudas": "",
+  "fuentes": [],
+  "filas": [
+   {
+    "k": "F|BARRAS|2.404",
+    "gir": "180",
+    "agr": "inv",
+    "c": true,
+    "n": "Weiler ½"
+   },
+   {
+    "k": "F|BARRAS|5.409",
+    "c": true,
+    "n": "Maloney"
+   },
+   {
+    "k": "F|BARRAS|2.405",
+    "n": "Vuelta libre 1/1"
+   },
+   {
+    "k": "F|BARRAS|3.403",
+    "c": true,
+    "n": "Tkatchev"
+   },
+   {
+    "k": "F|BARRAS|3.404",
+    "n": "Pak"
+   },
+   {
+    "k": "F|BARRAS|5.509",
+    "n": "Van Leeuwen"
+   },
+   {
+    "k": "F|BARRAS|5.408",
+    "c": true,
+    "n": "Toe-on 1/1"
+   },
+   {
+    "k": "F|BARRAS|6.606",
+    "n": "Doble atrás extendido con 1/1"
+   }
+  ]
+ },
+ {
+  "id": "BB3b",
+  "atleta": "Black BB: giros 2/1 y 1/1 sin conexión",
+  "competencia": "",
+  "nivel": "FIG",
+  "aparato": "VIGA",
+  "variante_de_comprobacion": true,
+  "D_oficial": 5.8,
+  "D_editor": 5.8,
+  "desglose_editor": {
+   "dv": 3.1,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.4,
+   "sb": 0.1,
+   "dmt": 0.2
+  },
+  "clasificacion": "variante",
+  "dudas": "",
+  "fuentes": [],
+  "filas": [
+   {
+    "k": "F|VIGA|1.401",
+    "c": true,
+    "n": "Entrada: zancada con cambio"
+   },
+   {
+    "k": "F|VIGA|2.405",
+    "c": true,
+    "n": "Zancada con cambio ½"
+   },
+   {
+    "k": "F|VIGA|5.207",
+    "n": "Korbut (flic-flac a horcajadas)"
+   },
+   {
+    "k": "F|VIGA|3.401",
+    "n": "Giro 2/1"
+   },
+   {
+    "k": "F|VIGA|3.101",
+    "n": "Giro 1/1"
+   },
+   {
+    "k": "F|VIGA|2.203",
+    "c": true,
+    "n": "Salto abierto (straddle)"
+   },
+   {
+    "k": "F|VIGA|2.112",
+    "n": "Salto lobo"
+   },
+   {
+    "k": "F|VIGA|5.410",
+    "n": "Mortal adelante agrupado"
+   },
+   {
+    "k": "F|VIGA|4.108",
+    "var": "1",
+    "c": true,
+    "n": "Tic-toc"
+   },
+   {
+    "k": "F|VIGA|5.202",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|VIGA|5.512",
+    "n": "Mortal atrás extendido (dos pies)"
+   },
+   {
+    "k": "F|VIGA|5.411",
+    "n": "Mortal lateral"
+   },
+   {
+    "k": "F|VIGA|6.404",
+    "n": "Mortal atrás extendido 2½ (salida)"
+   }
+  ]
+ },
+ {
+  "id": "BB4b",
+  "atleta": "Nemour BB: entrada 1.518 (mortal extendido con paso, E)",
+  "competencia": "",
+  "nivel": "FIG",
+  "aparato": "VIGA",
+  "variante_de_comprobacion": true,
+  "D_oficial": 6.2,
+  "D_editor": 6,
+  "desglose_editor": {
+   "dv": 3.2,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.4,
+   "sb": 0.2,
+   "dmt": 0.2
+  },
+  "clasificacion": "variante",
+  "dudas": "",
+  "fuentes": [],
+  "filas": [
+   {
+    "k": "F|VIGA|1.518",
+    "pos": "s",
+    "c": true,
+    "n": "Entrada: rondada mortal extendido con paso"
+   },
+   {
+    "k": "F|VIGA|5.312",
+    "pos": "s",
+    "n": "Mortal atrás extendido con paso"
+   },
+   {
+    "k": "F|VIGA|5.202",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|VIGA|5.202",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|VIGA|5.512",
+    "n": "Mortal atrás extendido (dos pies)"
+   },
+   {
+    "k": "F|VIGA|5.409",
+    "c": true,
+    "n": "Paloma adelante aérea"
+   },
+   {
+    "k": "F|VIGA|2.202",
+    "c": true,
+    "n": "Salto split"
+   },
+   {
+    "k": "F|VIGA|2.203",
+    "n": "Salto abierto (straddle)"
+   },
+   {
+    "k": "F|VIGA|2.305",
+    "c": true,
+    "n": "Zancada con cambio"
+   },
+   {
+    "k": "F|VIGA|2.405",
+    "n": "Zancada con cambio ½"
+   },
+   {
+    "k": "F|VIGA|5.408",
+    "n": "Rueda aérea"
+   },
+   {
+    "k": "F|VIGA|3.207",
+    "n": "Giro 1/1 en cuclillas (lobo)"
+   },
+   {
+    "k": "F|VIGA|6.505",
+    "n": "Doble atrás carpado (salida)"
+   }
+  ]
+ },
+ {
+  "id": "FX4b",
+  "atleta": "Kishi FX: Mitchell corto → 2/1 en cuclillas (2.407 D) y sin conexión al Memmel",
+  "competencia": "",
+  "nivel": "FIG",
+  "aparato": "PISO",
+  "variante_de_comprobacion": true,
+  "D_oficial": 5.8,
+  "D_editor": 5.8,
+  "desglose_editor": {
+   "dv": 3.4,
+   "cr": 2,
+   "crBits": "1111",
+   "cv": 0.2,
+   "sb": 0,
+   "dmt": 0.2
+  },
+  "clasificacion": "variante",
+  "dudas": "",
+  "fuentes": [],
+  "filas": [
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.802",
+    "n": "Doble atrás agrupado 2/1 (Silivas)"
+   },
+   {
+    "k": "F|PISO|3.105",
+    "c": true,
+    "n": "Inversión adelante"
+   },
+   {
+    "k": "F|PISO|4.202",
+    "c": true,
+    "n": "Mortal adelante extendido"
+   },
+   {
+    "k": "F|PISO|4.402",
+    "n": "Mortal adelante extendido 2/1"
+   },
+   {
+    "k": "F|PISO|2.407",
+    "n": "Giro 2/1 en cuclillas (lobo)"
+   },
+   {
+    "k": "F|PISO|2.403",
+    "n": "Memmel"
+   },
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.401",
+    "n": "Mortal atrás extendido 2½"
+   },
+   {
+    "k": "F|PISO|1.205",
+    "c": true,
+    "n": "Zancada con cambio"
+   },
+   {
+    "k": "F|PISO|1.405",
+    "n": "Sankova"
+   },
+   {
+    "k": "F|PISO|3.106",
+    "c": true,
+    "n": "Rondada"
+   },
+   {
+    "k": "F|PISO|3.107",
+    "c": true,
+    "n": "Flic-flac"
+   },
+   {
+    "k": "F|PISO|5.402",
+    "var": "1",
+    "n": "Doble atrás carpado"
+   }
+  ]
+ }
+]

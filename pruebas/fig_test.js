@@ -61,7 +61,7 @@ const T = [
   ['UB-02 raíz (UB1)', 'FIG', 'BARRAS', '4.304 4.404 4.504 4.502 6.406', { np: 2.30, dv: 1.60, cr: '0001', dmt: 0.20, nd: 4, why: { 3: /raíz/ } }],
   ['UB-03 Tkatchev por línea (UB2)', 'FIG', 'BARRAS', '4.502 4.602 3.403 3.503 6.406', { np: 2.00, dv: 1.30, cr: '0100', why: { 1: /Tkatchev/, 3: /Tkatchev/ } }],
   ['UB-03 líneas distintas', 'FIG', 'BARRAS', '3.403 4.502 6.406', { dv: 1.30 }],
-  ['UB-04 un Jaeger (UB3)', 'FIG', 'BARRAS', '3.308 3.408 6.406', { np: 1.40, dv: 0.70 }],
+  ['UB-04 un Jaeger (UB3)', 'FIG', 'BARRAS', '3.308 3.408 6.406', { np: 1.90, dv: 0.70 }],   // el Jaeger que cuenta cumple CR3 (agarre cubital/L), validado con Melnikova, Mundial 2025
   ['UB-06 CR1 Pak (UB8)', 'FIG', 'BARRAS', '3.404 6.406', { cr: '1000' }],
   ['UB-06 CR1 3.402', 'FIG', 'BARRAS', '3.402 6.406', { crBit: { 0: true } }],
   ['UB-07 4.405 no es misma barra', 'FIG', 'BARRAS', '4.405 6.406', { crBit: { 1: false } }],

@@ -43,31 +43,96 @@ function el(k){
   return null;
 }
 function usSalto(nivel,n){return (USV[numNivel(nivel)]||[]).find(x=>x.n===n)||null;}
-// Textos de búsqueda: español del Código (UPAG) + inglés + nombres + número.
-const SYN={mortal:['salto'],mortales:['salto'],atras:['bwd','backward','back'],adelante:['fwd','forward','front'],lateral:['sideward','side'],
-  agrupado:['tuck','tucked'],carpado:['pike','piked'],extendido:['stretched','layout','straight'],giro:['turn','twist','pirouette'],giros:['turn','twist'],
-  rondada:['round','off'],paloma:['handspring'],inversion:['handspring'],rueda:['cartwheel'],parada:['handstand'],manos:['handstand','hand'],
-  salida:['dismount'],entrada:['mount'],vuelta:['circle'],gigante:['giant'],doble:['double'],triple:['triple'],medio:['1/2'],
-  flic:['flic','flac','flick'],flac:['flic','flac'],split:['split'],abierto:['straddle'],zancada:['leap'],salto_:['jump','leap','hop'],
-  vela:['candle'],rodada:['roll'],rol:['roll'],valdez:['valdez'],kip:['kip'],baja:['lb','low'],alta:['hb','high'],banda:['bar'],
-  cambio:['switch','change'],tijera:['scissor'],sissone:['sissonne'],anillo:['ring'],lobo:['wolf'],cuclillas:['tuck'],arabe:['arabian'],aereo:['aerial'],aerea:['aerial']};
-const HAY={};
-function hay(k){if(HAY[k])return HAY[k];const e=el(k);if(!e)return'';let extra='';
-  if(e.sys==='U'){const fx=(US[e.ap][e.n]||{}).fig2025;const m=fx&&String(fx).match(/\d+\.\d+/);const f=m&&FIG[e.ap+'|'+m[0]];if(f)extra=' '+(f.d||'')+' '+(f.nom||'');}
-  return HAY[k]=' '+nk(e.n+' '+e.en+' '+e.d+' '+e.nom+extra)+' ';}
-function tokOk(h,t){if(h.includes(t))return true;return (SYN[t]||[]).some(s=>h.includes(' '+s)||h.includes(s+' '));}
-function search(q,a,ap){
-  const qn=nk(q);if(!qn)return[];const toks=qn.split(' ').filter(t=>t.length>1||/\d/.test(t));if(!toks.length)return[];
-  let keys=[];
-  if(ap==='SALTO'&&esUSAG(a.nivel))keys=(USV[numNivel(a.nivel)]||[]).map(x=>'V|'+x.n);
-  else if(esUSAG(a.nivel))keys=Object.keys(US[ap]||{}).map(n=>'U|'+ap+'|'+n);
-  else keys=Object.keys(FIG).filter(k=>k.startsWith(ap+'|')).map(k=>'F|'+k);
-  const out=[];
-  for(const k of keys){let h;
-    if(k[0]==='V'){const x=usSalto(a.nivel,k.slice(2));h=' '+nk(x.n+' '+x.nombre_en+' '+vaultES(x.nombre_en))+' ';}else h=hay(k);
-    if(!toks.every(t=>tokOk(h,t)))continue;
-    const n=k.split('|').pop();let s=0;if(n===qn)s-=100;if(h.includes(' '+qn+' '))s-=10;s+=h.length/400;out.push([s,k]);}
-  return out.sort((x,y)=>x[0]-y[0]).slice(0,14).map(x=>x[1]);
+/* ---------- búsqueda (como Jueceo GAV: español e inglés, apodos aprendidos, corrige faltas de ortografía) ---------- */
+// Cada palabra se lleva a una forma común, así lo escrito en español encuentra el texto en inglés (USAG solo tiene inglés)
+// y al revés. "salto" en español es el salto gimnástico (jump) y en inglés es el mortal: el índice usa el idioma del texto
+// y en lo que escribe el juez "salto" acepta las dos.
+const STOP=new Set(['con','en','de','del','la','el','a','al','o','y','tambien','por','desde','las','los','un','una','to','the','of','or','and','with','from','on','in','also','s']);
+const CANON={mortal:'mort',mortales:'mort',atras:'at',atr:'at',bwd:'at',backward:'at',back:'at',adelante:'ad',ade:'ad',adel:'ad',fwd:'ad',forward:'ad',front:'ad',
+  lateral:'lat',lat:'lat',sideward:'lat',side:'lat',swd:'lat',agrupado:'agr',agrupada:'agr',agr:'agr',tuck:'agr',tucked:'agr',carpado:'carp',carpada:'carp',carp:'carp',pike:'carp',piked:'carp',
+  extendido:'ext',extendida:'ext',ext:'ext',stretched:'ext',layout:'ext',straight:'ext',giro:'g',giros:'g',turn:'g',turns:'g',twist:'g',twists:'g',pirouette:'g',pirueta:'g',
+  doble:'dob',double:'dob',dbl:'dob',triple:'tri',rondada:'rond',roundoff:'rond',ro:'rond',flic:'flic',flac:'flic',flick:'flic',flicflac:'flic',ff:'flic',
+  paloma:'pal',handspring:'pal',hsp:'pal',fhs:'pal',rueda:'rueda',cartwheel:'rueda',parada:'hs',handstand:'hs',hs:'hs',invertido:'hs',salida:'sal',dismount:'sal',dmt:'sal',
+  entrada:'ent',mount:'ent',zancada:'zanc',leap:'zanc',jump:'jump',hop:'hop',brinco:'hop',vuelta:'circ',circle:'circ',circulo:'circ',gigante:'gig',giant:'gig',
+  split:'split',abierto:'abie',straddle:'abie',cambio:'camb',switch:'camb',change:'camb',tijera:'tij',scissor:'tij',sissone:'siss',sissonne:'siss',anillo:'anillo',ring:'anillo',
+  lobo:'lobo',wolf:'lobo',arabe:'arab',arabian:'arab',aereo:'aereo',aerea:'aereo',aerial:'aereo',walkover:'wo',kip:'kip',bascula:'kip',glide:'kip',
+  baja:'bi',bi:'bi',lb:'bi',low:'bi',inferior:'bi',alta:'bs',bs:'bs',hb:'bs',high:'bs',superior:'bs',suelta:'vuelo',release:'vuelo',vuelo:'vuelo',flight:'vuelo',
+  pierna:'pie',piernas:'pie',leg:'pie',legs:'pie',medio:'1/2',media:'1/2',completo:'1/1',full:'1/1',viga:'viga',beam:'viga',barra:'barra',bar:'barra',bars:'barra',
+  rol:'rol',rodada:'rol',roll:'rol',vela:'vela',candle:'vela',onda:'onda',wave:'onda',equilibrio:'equil',balance:'equil',scale:'equil',plancha:'equil'};
+const CANON_ES={salto:'jump',saltos:'jump'}, CANON_EN={salto:'mort',saltos:'mort'};
+const Q_ALT={salto:['jump','mort'],saltos:['jump','mort'],inversion:['pal','wo'],inversiones:['pal','wo']};
+const Q_PESO={mort:.85};
+const TIPOS=['jump','zanc','hop','mort','rol','pal','flic','rueda','wo','sal','ent','rond','aereo','equil','onda'];
+const FAMILIA={jump:'d',zanc:'d',hop:'d',pal:'m',flic:'m',rond:'m',wo:'m',rueda:'m'};   // saltos de danza; apoyos de manos   // "salto" en español es primero el salto gimnástico
+function frases(s){
+  return (' '+nk(s)+' ').replace(/(\d\/\d)([a-z])/g,'$1 $2').replace(/ (\d) 1\/2 /g,(m,n)=>' '+(2*n+1)+'/2 ')
+   .replace(/ (dos|2) giros? y medio /g,' 5/2 g ').replace(/ (uno|un|1) giro y medio /g,' 3/2 g ').replace(/ (tres|3) giros? y medio /g,' 7/2 g ')
+   .replace(/ giro doble /g,' 2/1 g ').replace(/ giro triple /g,' 3/1 g ').replace(/ doble giro y medio /g,' 5/2 g ').replace(/ giro y medio /g,' 3/2 g ').replace(/ doble giro /g,' 2/1 g ').replace(/ triple giro /g,' 3/1 g ')
+   .replace(/ (dos|2) giros /g,' 2/1 g ').replace(/ (tres|3) giros /g,' 3/1 g ').replace(/ (cuatro|4) giros /g,' 4/1 g ').replace(/ giro completo /g,' 1/1 g ').replace(/ medio giro /g,' 1/2 g ')
+   .replace(/ flic flac /g,' flic ').replace(/ round off /g,' rond ').replace(/ barra (alta|superior) /g,' bs ').replace(/ barra (baja|inferior) /g,' bi ');
+}
+function canonT(s,lang){const ex=lang==='en'?CANON_EN:lang==='es'?CANON_ES:{};
+  return frases(s).trim().split(' ').map(t=>ex[t]||CANON[t]||t).filter(t=>t&&!STOP.has(t));}
+// Lo que escribe el juez: cada palabra con sus formas aceptadas.
+function canonQ(s){return frases(s).trim().split(' ').filter(t=>t&&!STOP.has(t)).map(t=>Q_ALT[t]||[CANON[t]||t]);}
+function keysAp(a,ap){
+  if(ap==='SALTO'&&esUSAG(a.nivel))return (USV[numNivel(a.nivel)]||[]).map(x=>'V|'+x.n);
+  if(esUSAG(a.nivel))return Object.keys(US[ap]||{}).map(n=>'U|'+ap+'|'+n);
+  return Object.keys(FIG).filter(k=>k.startsWith(ap+'|')).map(k=>'F|'+k);}
+const IDX={};
+function idx(k,nivel){const ck=k[0]==='V'?numNivel(nivel)+'|'+k:k;if(IDX[ck])return IDX[ck];const e=el(k);let toks=[],raw='';
+  if(k[0]==='V'){const x=usSalto(nivel,k.slice(2))||{};raw=(x.nombre_en||'')+' '+vaultES(x.nombre_en||'');toks=[...canonT(x.nombre_en||'','en'),...canonT(vaultES(x.nombre_en||''),'es')];}
+  else{let extra='';if(e.sys==='U'){const fx=(US[e.ap][e.n]||{}).fig2025;const m=fx&&String(fx).match(/\d+\.\d+/);const f=m&&FIG[e.ap+'|'+m[0]];if(f)extra=(f.d||'')+' '+(f.nom||'');}
+    // Saltos FIG: nombres de uso común por grupo (el Código dice "rondada flic-flac" para el Yurchenko, etc.).
+    if(e.ap==='SALTO')extra+=' '+({1:'paloma yamashita',2:'paloma',3:'tsukahara',4:'yurchenko',5:'rondada medio giro'}[e.g]||'');
+    raw=e.en+' '+e.d+' '+e.nom+' '+extra;toks=[...canonT(e.en,'en'),...canonT(e.d,'es'),...canonT(extra,'es'),...canonT(e.nom,'')];}
+  const pri=t=>String(t||'').split(/\n|;|\balso\b|\btambién\b|\bor\b| o | \/ /)[0];
+  const main=k[0]==='V'?toks:[...canonT(pri(e.en),'en'),...canonT(pri(e.d),'es')];
+  return IDX[ck]={toks:[...new Set(toks)],main:new Set(main.length?main:toks),raw:nk(raw)};}
+// Apodos: los que el juez ya usó en sus rutinas y los aprendidos al elegir un elemento (S.alias).
+const sisDe=nivel=>esUSAG(nivel)?'U':'F';
+function apodos(ap,nivel){const m={},sis=sisDe(nivel);
+  for(const x of Object.values(S.atletas||{})){if(!x||sisDe(x.nivel)!==sis)continue;
+    for(const o of x.r?.[ap]||[])if(o.k&&el(o.k)&&o.n&&!/^[\d.\s]+$/.test(o.n)){const n=nk(o.n);if(n&&n!==nk(labelOf(o.k,x.nivel)))m[n]=o.k;}}
+  for(const [ak,k] of Object.entries(S.alias||{}))if(ak.startsWith(sis+'|'+ap+'|'))m[ak.slice(sis.length+ap.length+2)]=k;
+  return m;}
+function distancia(a,b){if(Math.abs(a.length-b.length)>2)return 9;const m=[...Array(b.length+1).keys()];
+  for(let i=1;i<=a.length;i++){let prev=m[0];m[0]=i;for(let j=1;j<=b.length;j++){const t=m[j];m[j]=Math.min(m[j]+1,m[j-1]+1,prev+(a[i-1]===b[j-1]?0:1));prev=t;}}return m[b.length];}
+// "tkachev" → "tkatchev", "shaposnikova" → "shaposhnikova": cada palabra desconocida se cambia por la más parecida.
+function corregir(qn,a,ap){const v=new Set();
+  for(const k of keysAp(a,ap))idx(k,a.nivel).raw.split(' ').forEach(w=>{if(w.length>=4&&!/\d/.test(w))v.add(w);});
+  Object.keys(apodos(ap,a.nivel)).forEach(t=>t.split(' ').forEach(w=>{if(w.length>=4)v.add(w);}));
+  const voc=[...v];let cambio=false;
+  const out=qn.split(' ').map(w=>{if(w.length<4||v.has(w)||/\d/.test(w)||STOP.has(w)||CANON[w]||Q_ALT[w]||voc.some(c=>c.startsWith(w)))return w;
+    let mejor=null,dm=w.length>=7?2:1;for(const c of voc){const d=distancia(w,c.slice(0,Math.max(w.length,c.length)));if(d<=dm&&(!mejor||d<dm)){mejor=c;dm=d;}}
+    if(mejor){cambio=true;return mejor;}return w;});
+  return cambio?out.join(' '):null;}
+function search(q,a,ap,sinCorregir){
+  const qn=nk(q);if(!qn)return[];const qt=canonQ(qn);const out=new Map();
+  const add=(k,sc)=>{const p=out.get(k);if(p==null||p<sc)out.set(k,sc);};
+  const keys=keysAp(a,ap),valid=new Set(keys);
+  // Número del Código escrito (3.407, 4.35; en USAG también 5.503)
+  if(/^\d+\.\d+$/.test(qn))for(const k of keys){if(k.split('|').pop()===qn)add(k,5);}
+  for(const [an,k] of Object.entries(apodos(ap,a.nivel))){if(!valid.has(k))continue;
+    if(an===qn)add(k,4);else if(an.startsWith(qn))add(k,3.4);else if(an.includes(qn))add(k,3);
+    else if(qn.length>=6&&distancia(qn.replace(/ /g,''),an.replace(/ /g,'').slice(0,qn.replace(/ /g,'').length))<=1)add(k,2.6);}
+  if(qt.length)for(const k of keys){const it=idx(k,a.nivel);
+    const pes=alts=>{let m=0;for(const t of alts)if(it.toks.some(x=>x.startsWith(t))||(t.length>=4&&it.raw.includes(t)))m=Math.max(m,Q_PESO[t]||1);return m;};
+    const ws=qt.map(pes),hit=ws.filter(w=>w>0).length,peso=ws.reduce((x,y)=>x+y,0);
+    if(!hit||hit<Math.max(1,qt.length-1))continue;
+    const plano=qt.flat();const extra=it.toks.filter(x=>!plano.some(t=>x.startsWith(t))).length;
+    let sc=peso/qt.length*(hit===qt.length?1.5:1)-0.01*extra;
+    // Lo que no se pidió baja el elemento: doble/triple, giros (si no se escribió ninguno) y otro tipo de elemento
+    // ("giro 1/1" prefiere el giro y no el salto con giro; "gigante" el gigante sin giro).
+    const M=it.main,fam=new Set(plano.map(t=>FAMILIA[t]).filter(Boolean));
+    if(M.has('dob')&&!plano.includes('dob'))sc-=.4;if(M.has('tri')&&!plano.includes('tri'))sc-=.4;
+    if(!plano.some(t=>t==='g'||/\d\/\d/.test(t))&&[...M].some(t=>t==='g'||/^\d\/\d$/.test(t)))sc-=.4;
+    sc-=.25*Math.min(2,TIPOS.filter(t=>M.has(t)&&!plano.includes(t)&&!(FAMILIA[t]&&fam.has(FAMILIA[t]))).length);
+    add(k,sc);}
+  const res=[...out.entries()].sort((x,y)=>y[1]-x[1]).slice(0,14);
+  if(!sinCorregir&&(!res.length||res[0][1]<1)){const q2=corregir(qn,a,ap);
+    if(q2){const r2=search(q2,a,ap,true);if(r2.length)return r2;}}
+  return res.map(x=>x[0]);
 }
 // Saltos USAG: la tabla usa abreviaturas en inglés (RO, FF, Hsp, Tsuk…); se agregan sus nombres comunes en español.
 function vaultES(t){let x='';
@@ -480,8 +545,19 @@ function exportExcel(){
 /* ---------- eventos ---------- */
 function A(){return S.atletas[ui.atleta];}
 function rowsAp(){const a=A();return a.r[ui.ap]||(a.r[ui.ap]=[]);}
+// Nombre al colocar un elemento (como Jueceo GAV): el apodo más usado en las rutinas, el nombre propio del Código
+// (Amanar, Ejova…) o la descripción.
+function nombreDe(k,nivel){const c=new Map(),lab=labelOf(k,nivel);
+  for(const x of Object.values(S.atletas||{}))for(const rows of Object.values(x?.r||{}))for(const o of rows||[])
+    if(o.k===k&&o.n&&!/^[\d.\s]+$/.test(o.n)&&nk(o.n)!==nk(lab))c.set(o.n.trim(),(c.get(o.n.trim())||0)+1);
+  let mejor=null,max=0;for(const [n,v] of c)if(v>max){max=v;mejor=n;}if(mejor)return mejor;
+  // Solo si la casilla tiene un único nombre propio (si trae varios, no se sabe cuál variante es).
+  const e=el(k);const nom=e&&e.nom&&!/\/|\n/.test(e.nom)?String(e.nom).trim():'';
+  return nom||lab;}
 function addRow(k,free){const rows=rowsAp(),q0=ui.q.trim(),q=k&&/^[\d.\s]+$/.test(q0)?'':q0;
-  const r={n:q||(k?labelOf(k,A().nivel):'Elemento'),k:k||null};
+  // Lo escrito queda como apodo de ese elemento para la próxima búsqueda (como en Jueceo GAV).
+  if(k&&q&&k[0]!=='V'&&nk(q)!==nk(labelOf(k,A().nivel))){S.alias=S.alias||{};S.alias[sisDe(A().nivel)+'|'+ui.ap+'|'+nk(q)]=k;}
+  const r={n:q||(k?nombreDe(k,A().nivel):'Elemento'),k:k||null};
   if(ui.replace!=null&&ui.replace>=0&&rows[ui.replace]){const old=rows[ui.replace];rows[ui.replace]={...old,k:r.k,n:q||old.n,l:undefined};ui.replace=-1;}
   else rows.push(r);
   ui.q='';ui.open=-1;save();render();}
@@ -538,7 +614,7 @@ root.addEventListener('keydown',e=>{
 function iniciarEditor(d){
   FIG=d.fig.E;FIGG=d.fig.grupos;JUNIOR=d.fig.junior||{};US={BARRAS:d.us.BARRAS,VIGA:d.us.VIGA,PISO:d.us.PISO};USV=d.usv;USR=d.usr;
   let stored=null;try{stored=JSON.parse(localStorage.getItem(LOCAL)||'null');}catch(e){}
-  S={atletas:stored?.atletas||{},orden:stored?.orden||[]};
+  S={atletas:stored?.atletas||{},orden:stored?.orden||[],alias:stored?.alias||{}};
   for(const n of Object.keys(S.atletas)){const a=S.atletas[n];a.r=a.r||{};for(const[ap]of APS)a.r[ap]=a.r[ap]||[];a.cr=a.cr||{};a.sr=a.sr||{};a.cc=a.cc||{};a.p=a.p||{};if(!S.orden.includes(n))S.orden.push(n);}
   S.orden=S.orden.filter(n=>S.atletas[n]);
   render();

@@ -213,9 +213,9 @@ function check(out, exp) {
     else ok++;
   }
   console.log(`\nPruebas USAG: ${ok} pasan, ${fail} fallan (de ${T.length}).`);
-  // Regresión FIG: rutina EJEMPLO (Salto 5.40, Barras 3.80, Viga 4.20, Piso 5.30)
+  // Regresión FIG: rutina EJEMPLO = rutinas reales del Mundial 2025 con su D oficial (Melnikova VT 5.0, Nemour UB 7.1, Sugihara BB 6.0 y FX 5.8)
   const fig = await page.evaluate(() => { const t = totals('EJEMPLO'); return { SALTO: t.SALTO.np, BARRAS: t.BARRAS.np, VIGA: t.VIGA.np, PISO: t.PISO.np }; });
-  const figExp = { SALTO: 5.4, BARRAS: 3.8, VIGA: 4.2, PISO: 5.3 };   // PISO con líneas acrobáticas (reglas FIG nuevas)
+  const figExp = { SALTO: 5.0, BARRAS: 7.1, VIGA: 6.0, PISO: 5.8 };
   const figBad = Object.entries(figExp).filter(([k, v]) => !near(fig[k], v));
   console.log('Regresión FIG EJEMPLO:', JSON.stringify(fig), figBad.length ? 'FALLA' : 'OK');
   // Interfaz: rutina N10 de piso en celular, abrir el panel del último elemento.

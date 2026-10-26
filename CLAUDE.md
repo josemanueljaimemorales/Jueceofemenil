@@ -16,7 +16,8 @@ español, claro y sin relleno. Ver README.md.
   copiar el cálculo/buscador/vistas y `datos/`, no estas diferencias.
 - Documentos del inicio en `app/config.js` (`JUECEO.docs`): Código GAF en español (`app/docs/`), inglés y boletines WAG
   de la FIG, Rules & Policies de USAG (enlaces oficiales).
-- Rutina de ejemplo: `app/datos/ejemplo.json` (atleta EJEMPLO, no es una gimnasta real), una vez por equipo.
+- Rutina de ejemplo: `app/datos/ejemplo.json` (atleta EJEMPLO = rutinas reales del Mundial 2025 cuya D oficial reproduce el
+  editor; ver `nota`), una vez por equipo. Validación con rutinas reales: `pruebas/validacion/` (correr.js, VALIDACION_FIG.md).
 - Al cambiar JS/CSS, subir el `?v=` en `app/index.html`/`app/admin.html` y `CACHE` en `app/sw.js`.
 - Probar pantalla y PDF/impresión (fondo blanco, sin etiquetas de prueba) y los cálculos con casos límite antes de publicar.
 - Reglas: especificaciones con artículo, detección y casos de prueba en `fuentes/REGLAS_FIG_WAG.md` (FIG/Junior) y
